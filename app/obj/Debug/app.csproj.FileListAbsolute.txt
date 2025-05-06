@@ -1,0 +1,12 @@
+C:\Users\USER\source\repos\app\app\bin\Debug\app.exe.config
+C:\Users\USER\source\repos\app\app\bin\Debug\app.exe
+C:\Users\USER\source\repos\app\app\bin\Debug\app.pdb
+C:\Users\USER\source\repos\app\app\obj\Debug\app.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\app\app\obj\Debug\app.access.resources
+C:\Users\USER\source\repos\app\app\obj\Debug\app.Form1.resources
+C:\Users\USER\source\repos\app\app\obj\Debug\app.Properties.Resources.resources
+C:\Users\USER\source\repos\app\app\obj\Debug\app.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\app\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\app\app\obj\Debug\app.exe
+C:\Users\USER\source\repos\app\app\obj\Debug\app.pdb
+C:\Users\USER\source\repos\app\app\obj\Debug\app.fomularios.menu_principal.resources
