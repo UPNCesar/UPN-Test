@@ -27,8 +27,8 @@ namespace app
 
             Application.Run(new Form1(app_name, app_version));
 
-         //instrucciones de como emplear git hub
-         //hola
+         //instrucciones de como usar github
+         //hola como estás
         }
     }
 }
