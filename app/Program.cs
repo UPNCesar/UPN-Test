@@ -26,6 +26,8 @@ namespace app
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new Form1(app_name, app_version));
+
+            //hola
         }
     }
 }
