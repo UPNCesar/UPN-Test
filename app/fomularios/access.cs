@@ -70,10 +70,38 @@ namespace app
         private void acceso_Click(object sender, EventArgs e)
         {
             logicas logic = new logicas();
-            string resultado = logic.login(user_n.Text, password1.Text);
+            string resultadoError = logic.login(user_n.Text, password1.Text);
 
 
-            if (resultado != "") MessageBox.Show(resultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            
+            if (resultadoError != "")
+            {
+               
+
+                
+
+                
+                switch (resultadoError)
+                {
+                    case "Cesar":
+                        aplicacionadmin appad = new aplicacionadmin(app_name, app_version, "César Ruitón");
+                        appad.ShowDialog();
+                        break;
+                    case "Blanco":
+                        aplicacionadmin appad2 = new aplicacionadmin(app_name, app_version, "Blanco Mayerhoffer");
+                        appad2.ShowDialog();
+                        break;
+                    case "Luis":
+                        aplicacionadmin appad3 = new aplicacionadmin(app_name, app_version, "Luis Reina");
+                        appad3.ShowDialog();
+                        break;
+                    default:
+                        MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                }
+            }
+               
             else
             {
                 bool opciones = true;
@@ -87,10 +115,10 @@ namespace app
         private void registrarse_Click(object sender, EventArgs e)
         {
             logicas logic = new logicas();
-            string resultado = logic.registro(user_n.Text, password1.Text, password2.Text);
+            string resultadoError = logic.registro(user_n.Text, password1.Text, password2.Text);
 
 
-            if (resultado != "") MessageBox.Show( resultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (resultadoError != "") MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 bool opciones = true;
@@ -105,9 +133,9 @@ namespace app
         {
             logicas logic = new logicas();
 
-            string resultado = logic.inviter(user_n.Text);
+            string resultadoError = logic.inviter(user_n.Text);
 
-            if (resultado != "") MessageBox.Show(resultado, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (resultadoError != "") MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 bool opciones = false;

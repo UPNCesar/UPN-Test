@@ -52,6 +52,12 @@
     <Compile Include="fomularios\access.Designer.cs">
       <DependentUpon>access.cs</DependentUpon>
     </Compile>
+    <Compile Include="fomularios\aplicacionadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\aplicacionadmin.Designer.cs">
+      <DependentUpon>aplicacionadmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fomularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fomularios\access.resx">
       <DependentUpon>access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fomularios\aplicacionadmin.resx">
+      <DependentUpon>aplicacionadmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -97,6 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="data\userData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

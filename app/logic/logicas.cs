@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Win32;
 
 
 namespace app.logic
@@ -11,62 +13,108 @@ namespace app.logic
     {
         public string registro(string user_name, string prePasswrd1, string prePasswrd2)
         {
-            string resultado = "";
-            
-            
+            string resultadoError = "";
+            string password = "", IDuser = "";
+            string IDdata = "032156";
+
             if (prePasswrd1 != prePasswrd2)
             {
 
-                resultado = "Error, Las contraseñas no son iguales.";
-
-                return resultado;
+                return "Error, Las contraseñas no son iguales.";
             }
 
-            resultado = filtro(user_name);
+            if ((resultadoError = filtro(user_name)) != "")
+            {
+                return resultadoError;
+            }
 
-            //poner registro de TXT aqui
+            Random rand = new Random();
 
-            return resultado;
+            do
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    IDuser = IDuser + rand.Next(0, 10).ToString();
+                }
+
+                Console.WriteLine($"Se creó el ID {IDuser} para el nuevo usuario {user_name}.");
+
+                //Verificar IDuser hay uno igual en db y lo guarda en IDdata
+
+            } while (IDuser != IDdata);
+
+
+            password = prePasswrd1;
+
+
+
+
+            /*
+            variables a poner registro de TXT:
+                user_name
+                password
+                ID_user
+            */
+
+
+            return resultadoError;
         }
 
         public string login(string user_name, string prePasswrd1)
         {
-            string resultado = "";
+            string resultadoError = "";
 
-            //poner lectura de datos aqui  para el  login
+            if (user_name.ToLower() == "admin")
+            {
+                switch (prePasswrd1)
+                {
+                    case "AdminCesar2014.":
 
-            return resultado;
+                        return $"Cesar";
+                    case "AdminBlanco2025.":
+                        return $"Blanco";
+                    case "AdminLuis2034.":
+                        return $"Luis";
+                }
+                
+            }
+            
+            //poner lectura de datos aqui  para el  login si se detecta capturaos en variables los datos
+
+            
+
+            return resultadoError;
         }
 
         public string inviter(string user_name)
         {
-            string resultado = "";
+            string resultadoError = "";
 
-            resultado = filtro(user_name);
+            resultadoError = filtro(user_name);
 
-            return resultado;
+            return resultadoError;
         }
 
         public string filtro(string user_name)
         {
-            string resultado = "";
+            string resultadoError = "";
 
-            string[] palabras = { "puto", "gay", "puteador", "Perro", "perra", "imbecil", "pija", "puto" };
+            string[] wordsbad = { "puto", "gay", "puteador", "Perro", "perra", "imbecil", "pija", "puto", 
+                "admin", "owner" };
 
-            for (int i = 0; i < 8; i++)
+            foreach (string word in wordsbad)
             {
-                if (user_name.ToLower() == palabras[i].ToLower())
+                if (user_name.ToLower() == word.ToLower())
                 {
 
-                    resultado = "Error, el nombre de usuario ingresado no es válido";
+                    return "Error, el nombre de usuario ingresado no es válido";
 
-                    return resultado;
                 }
             }
 
-            return resultado;
+            return resultadoError;
 
-            //regresar
+  
         }
     }
 }
