@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,7 @@ namespace app.logic
 
             password = prePasswrd1;
 
-
+            
 
 
             /*
@@ -115,6 +116,97 @@ namespace app.logic
             return resultadoError;
 
   
+        }
+
+        public string Logs_txt(string user_name, int tipo, string message, short nivel)
+        {
+            
+            
+            switch(tipo)
+            {
+                case 1: //delete admin databas-----------------------------------------------------------------
+                    TextWriter AdmReset = new StreamWriter(@"D:\app2\app\data\AdmActions.txt");
+
+                    AdmReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores");
+
+                    AdmReset.Close();
+
+                    return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores";
+
+                case 2://delete user_ID database --------------------------------------------------------------------
+                    TextWriter UserReset = new StreamWriter(@"D:\app2\app\data\userData.txt");
+
+                    UserReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios");
+
+                    UserReset.Close();
+
+                    return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios";
+
+                case 3:  //delete inst. database --------------------------------------------------------------------
+                    TextWriter InstReset = new StreamWriter(@"D:\app2\app\data\InstList.txt");
+
+                    InstReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de instituciones");
+
+                    InstReset.Close();
+
+                    return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de instituciones";
+
+                case 6:  //delete reclamos. database --------------------------------------------------------------------
+                    TextWriter reporReset = new StreamWriter(@"D:\app2\app\data\InstList.txt");
+
+                    reporReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de reportes/reclamos");
+
+                    reporReset.Close();
+
+                    return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de reportes/reclamos";
+
+
+
+
+                case 4:  //escribir en database administradores info, warn y errores--------------------------------------------------------------------
+                    TextWriter admwrite = File.AppendText(@"D:\app2\app\data\AdmActions.txt");
+
+                    switch (nivel)
+                    {
+                        case 1: 
+                            admwrite.WriteLine($"[INFO:] {user_name} {message}");
+
+                            admwrite.Close();
+
+                            return $"[INFO:] {user_name} {message}";
+
+                        case 2:
+                            admwrite.WriteLine($"[WARN:] {user_name} {message}");
+
+                            admwrite.Close();
+
+                            return $"[WARN:] {user_name} {message}";
+                        case 3:
+                            admwrite.WriteLine($"[ERROR:] {user_name} {message}");
+
+                            admwrite.Close();
+
+                            return $"[ERROR:] {user_name} {message}";
+                    }
+                    return $"[ERROR CRiTICO:] {user_name} No existe el tipo de alerta";
+
+
+                case 5:  //Escribir en database usuarios_ID (registro, eliminar cuenta y cambiar nombre --------------------------------------------------------------------
+                    TextWriter userWrite= File.AppendText(@"D:\app2\app\data\userData.txt");
+
+                    userWrite.WriteLine($"");
+
+                    userWrite.Close();
+
+                    return $"[INFO:] {user_name} {message}";
+
+
+
+
+                
+            }
+
+            return "";
         }
     }
 }

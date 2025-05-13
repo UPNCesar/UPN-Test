@@ -58,6 +58,12 @@
     <Compile Include="fomularios\aplicacionadmin.Designer.cs">
       <DependentUpon>aplicacionadmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fomularios\console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\console.Designer.cs">
+      <DependentUpon>console.cs</DependentUpon>
+    </Compile>
     <Compile Include="fomularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\aplicacionadmin.resx">
       <DependentUpon>aplicacionadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fomularios\console.resx">
+      <DependentUpon>console.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -109,6 +118,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="data\AdmActions.txt" />
+    <Content Include="data\InstList.txt" />
+    <Content Include="data\reports.txt" />
     <Content Include="data\userData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

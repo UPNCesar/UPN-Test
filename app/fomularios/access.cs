@@ -77,24 +77,25 @@ namespace app
             
             if (resultadoError != "")
             {
-               
 
-                
+                aplicacionadmin appad = new aplicacionadmin(app_name, app_version, resultadoError);
 
-                
+
+
                 switch (resultadoError)
                 {
+                    
                     case "Cesar":
-                        aplicacionadmin appad = new aplicacionadmin(app_name, app_version, "César Ruitón");
+                        
                         appad.ShowDialog();
                         break;
                     case "Blanco":
-                        aplicacionadmin appad2 = new aplicacionadmin(app_name, app_version, "Blanco Mayerhoffer");
-                        appad2.ShowDialog();
+                        
+                        appad.ShowDialog();
                         break;
                     case "Luis":
-                        aplicacionadmin appad3 = new aplicacionadmin(app_name, app_version, "Luis Reina");
-                        appad3.ShowDialog();
+                        
+                        appad.ShowDialog();
                         break;
                     default:
                         MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -1,0 +1,7 @@
+[ALERT:] (Acción irreversible) Blanco Reseteó la base de datos de registro de acciones de administradores
+[INFO:] Blanco Visualizó el historial de acciones de los administradores
+[INFO:] Blanco Salió de su consola personal
+[INFO:] Blanco accedió en modo lectura a la base de datos de lista de usuarios registrados
+[INFO:] Blanco accedió en modo lectura a la base de datos de lista de instituciones
+[WARN:] Blanco accedió en modo editor a la base de datos de lista de usuarios registrados
+[WARN:] Blanco accedió en modo editor a la base de datos de lista de instituciones
