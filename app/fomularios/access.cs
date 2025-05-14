@@ -88,28 +88,38 @@ namespace app
                     case "Cesar":
                         
                         appad.ShowDialog();
+
+          
                         break;
                     case "Blanco":
                         
                         appad.ShowDialog();
+
+          
                         break;
                     case "Luis":
                         
                         appad.ShowDialog();
+
+          
                         break;
                     default:
-                        MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        bool opciones = true;
+
+                        menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
+
+                        _menu.ShowDialog();
+
+
                         break;
                 }
             }
                
             else
             {
-                bool opciones = true;
+                
 
-                menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
-
-                _menu.ShowDialog();
+                MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -117,8 +127,7 @@ namespace app
         {
             logicas logic = new logicas();
             string resultadoError = logic.registro(user_n.Text, password1.Text, password2.Text);
-
-
+            
             if (resultadoError != "") MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -127,6 +136,8 @@ namespace app
                 menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
 
                 _menu.ShowDialog();
+
+
             }
         }
 
@@ -144,6 +155,8 @@ namespace app
                 menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
 
                 _menu.ShowDialog();
+
+                this.Close();
             }
 
 

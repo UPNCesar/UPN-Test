@@ -110,7 +110,7 @@
             // 
             // invitado
             // 
-            this.invitado.Location = new System.Drawing.Point(145, 175);
+            this.invitado.Location = new System.Drawing.Point(148, 175);
             this.invitado.Name = "invitado";
             this.invitado.Size = new System.Drawing.Size(142, 23);
             this.invitado.TabIndex = 9;

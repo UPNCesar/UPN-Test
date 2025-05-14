@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Microsoft.Win32;
 
 
@@ -14,9 +15,8 @@ namespace app.logic
     {
         public string registro(string user_name, string prePasswrd1, string prePasswrd2)
         {
-            string resultadoError = "";
-            string password = "", IDuser = "";
-            string IDdata = "032156";
+
+            
 
             if (prePasswrd1 != prePasswrd2)
             {
@@ -24,28 +24,38 @@ namespace app.logic
                 return "Error, Las contraseñas no son iguales.";
             }
 
-            if ((resultadoError = filtro(user_name)) != "")
+            
+       
+
+            string[] wordsbad = { "puto", "gay", "puteador", "Perro", "perra", "imbecil", "pija", "puto", "admin", "owner"};
+
+            foreach (string word in wordsbad)
             {
-                return resultadoError;
+                if (user_name.ToLower() == word.ToLower())
+                {
+
+                    return "Error, el nombre de usuario ingresado no es válido";
+
+                }
             }
 
-            Random rand = new Random();
 
-            do
+            string[] user_basedata = File.ReadAllLines(@"D:\app2\app\data\userData.txt");
+
+            for (int i = 0; i < user_basedata.Length; i++)
             {
-                for (int i = 0; i < 6; i++)
+                string[] dato = user_basedata[i].Split(',');
+
+                if (dato[0] == user_name)
                 {
-                    IDuser = IDuser + rand.Next(0, 10).ToString();
+
+                    return $"Error, el nombre {user_name} ya está en uso";
                 }
+                
 
-                Console.WriteLine($"Se creó el ID {IDuser} para el nuevo usuario {user_name}.");
-
-                //Verificar IDuser hay uno igual en db y lo guarda en IDdata
-
-            } while (IDuser != IDdata);
+            }
 
 
-            password = prePasswrd1;
 
             
 
@@ -58,7 +68,7 @@ namespace app.logic
             */
 
 
-            return resultadoError;
+            return "";
         }
 
         public string login(string user_name, string prePasswrd1)
