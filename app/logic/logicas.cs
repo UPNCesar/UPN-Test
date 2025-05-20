@@ -40,7 +40,8 @@ namespace app.logic
             }
 
 
-            string[] user_basedata = File.ReadAllLines(@"D:\app2\app\data\userData.txt");
+            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            //D:\UPN-Test\app\data\userData.txt
 
             for (int i = 0; i < user_basedata.Length; i++)
             {
@@ -135,7 +136,7 @@ namespace app.logic
             switch(tipo)
             {
                 case 1: //delete admin databas-----------------------------------------------------------------
-                    TextWriter AdmReset = new StreamWriter(@"D:\app2\app\data\AdmActions.txt");
+                    TextWriter AdmReset = new StreamWriter(@"D:\UPN-Test\app\data\AdmActions.txt");
 
                     AdmReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores");
 
@@ -144,7 +145,7 @@ namespace app.logic
                     return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores";
 
                 case 2://delete user_ID database --------------------------------------------------------------------
-                    TextWriter UserReset = new StreamWriter(@"D:\app2\app\data\userData.txt");
+                    TextWriter UserReset = new StreamWriter(@"D:\UPN-Test\app\data\userData.txt");
 
                     UserReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios");
 
@@ -153,7 +154,7 @@ namespace app.logic
                     return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios";
 
                 case 3:  //delete inst. database --------------------------------------------------------------------
-                    TextWriter InstReset = new StreamWriter(@"D:\app2\app\data\InstList.txt");
+                    TextWriter InstReset = new StreamWriter(@"D:\UPN-Test\app\data\InstList.txt");
 
                     InstReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de instituciones");
 
@@ -162,7 +163,7 @@ namespace app.logic
                     return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de instituciones";
 
                 case 6:  //delete reclamos. database --------------------------------------------------------------------
-                    TextWriter reporReset = new StreamWriter(@"D:\app2\app\data\InstList.txt");
+                    TextWriter reporReset = new StreamWriter(@"D:\UPN-Test\app\data\InstList.txt");
 
                     reporReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de reportes/reclamos");
 
@@ -174,7 +175,7 @@ namespace app.logic
 
 
                 case 4:  //escribir en database administradores info, warn y errores--------------------------------------------------------------------
-                    TextWriter admwrite = File.AppendText(@"D:\app2\app\data\AdmActions.txt");
+                    TextWriter admwrite = File.AppendText(@"D:\UPN-Test\app\data\AdmActions.txt");
 
                     switch (nivel)
                     {
@@ -202,7 +203,7 @@ namespace app.logic
 
 
                 case 5:  //Escribir en database usuarios_ID (registro, eliminar cuenta y cambiar nombre --------------------------------------------------------------------
-                    TextWriter userWrite= File.AppendText(@"D:\app2\app\data\userData.txt");
+                    TextWriter userWrite= File.AppendText(@"D:\UPN-Test\app\data\userData.txt");
 
                     userWrite.WriteLine($"");
 
