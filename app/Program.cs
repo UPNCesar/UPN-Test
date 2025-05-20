@@ -20,7 +20,7 @@ namespace app
         static void Main()
         {
             string app_name = "app name";
-            string app_version = "v1.0.0";
+            string app_version = "v1.0.1";
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -143,9 +143,9 @@ namespace app
 
         private void invitado_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
+      
 
-            string resultadoError = logic.inviter(user_n.Text);
+            string resultadoError = Bs.libraryOne.VerifyWorldBlockList(user_n.Text); 
 
             if (resultadoError != "") MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else

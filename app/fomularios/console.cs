@@ -47,15 +47,15 @@ namespace app.fomularios
 
         private void ViewActi_Click(object sender, EventArgs e)
         {
-            TextReader AdminAction = new StreamReader(@"D:\app2\app\data\AdmActions.txt");
+            TextReader AdminAction = new StreamReader(@"D:\UPN-Test\app\data\AdmActions.txt");
 
             MultConsol.Text = AdminAction.ReadToEnd();
 
             AdminAction.Close();
 
-            logicas logic = new logicas();
 
-            logic.Logs_txt(user_nam, 4, "Visualizó el historial de acciones de los administradores", 1);
+
+            Bs.libraryOne.WriteLogAdmin(user_nam, 1, "Visualizó el historial de acciones de los administradores");
         }
 
 
@@ -63,27 +63,27 @@ namespace app.fomularios
         {
             logicas logic = new logicas();
 
-            MessageBox.Show(logic.Logs_txt(user_nam, 1, "", 1));
+            MessageBox.Show(Bs.libraryOne.AdminResetdb(user_nam));
 
             
         }
 
         private void reportesView_Click(object sender, EventArgs e)
         {
-            TextReader reportAction = new StreamReader(@"D:\app2\app\data\reports.txt");
+            TextReader reportAction = new StreamReader(@"D:\UPN-Test\app\data\reports.txt");
 
             MultConsol.Text = reportAction.ReadToEnd();
 
             logicas logic = new logicas();
 
-            logic.Logs_txt(user_nam, 4, "Visualizó los reportes activos de la aplicacion", 1);
+            Bs.libraryOne.WriteLogAdmin(user_nam, 1, "Visualizó los reportes activos de la aplicacion");
         }
 
         private void delREports_Click(object sender, EventArgs e)
         {
             logicas logic = new logicas();
 
-            MessageBox.Show(logic.Logs_txt(user_nam, 6, "", 1));
+            MessageBox.Show(Bs.libraryOne.ReportesResetdb(user_nam));
 
 
         }
@@ -94,7 +94,7 @@ namespace app.fomularios
 
             logicas logic = new logicas();
 
-            logic.Logs_txt(user_nam, 4, "Salió de su consola personal", 1);
+            Bs.libraryOne.WriteLogAdmin(user_nam, 1, "Salió de su consola personal");
         }
     }
 }

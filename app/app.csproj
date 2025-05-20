@@ -116,7 +116,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Bibliotecas\Bs.csproj">
+      <Project>{fc458d78-c93e-4e3c-b085-7f09b7588efe}</Project>
+      <Name>Bs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="data\AdmActions.txt" />
     <Content Include="data\InstList.txt" />

@@ -30,11 +30,8 @@ namespace app.fomularios
 
 
         private void button1_Click(object sender, EventArgs e)
-        {//eliminar db admin
-
-            logicas logic = new logicas();
-
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 1, "", 1) + Environment.NewLine);
+        {
+            consoleAdmin.AppendText(Bs.libraryOne.AdminResetdb(user_name) + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
 
         }
@@ -42,9 +39,9 @@ namespace app.fomularios
         private void ActivityAdmin_Click(object sender, EventArgs e)
         {
 
-            logicas logic = new logicas();
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "accedió en modo lectura a la base de datos de administradores", 1 ) + Environment.NewLine);
+
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 1, "accedió en modo lectura a la base de datos de administradores") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
 
             console cs = new console(user_name, 1);
@@ -53,41 +50,40 @@ namespace app.fomularios
 
         private void ListInst_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "accedió en modo lectura a la base de datos de lista de instituciones", 1) + Environment.NewLine);
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 1, "accedió en modo lectura a la base de datos de lista de instituciones") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
         }
 
         private void ListUsers_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
+     
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "accedió en modo lectura a la base de datos de lista de usuarios registrados", 1) + Environment.NewLine);
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 1, "accedió en modo lectura a la base de datos de lista de usuarios registrados") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
         }
 
         private void EditListUsers_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "accedió en modo editor a la base de datos de lista de instituciones", 2) + Environment.NewLine);
+
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 2, "accedió en modo editor a la base de datos de lista de instituciones") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
         }
 
         private void EditListInst_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
+   
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "accedió en modo editor a la base de datos de lista de usuarios registrados", 2) + Environment.NewLine);
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 2, "accedió en modo editor a la base de datos de lista de usuarios registrados") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
         }
 
         private void BugandClaim_Click(object sender, EventArgs e)
         {
-            logicas logic = new logicas();
+  
 
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "Está visualizando los reportes/reclamos de la aplicacion", 1) + Environment.NewLine);
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name,1, "Está visualizando los reportes/reclamos de la aplicacion") + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
 
             console cs = new console(user_name, 2);
@@ -98,6 +94,7 @@ namespace app.fomularios
         private void ClearConsole_Click(object sender, EventArgs e)
         {
             consoleAdmin.Text = "";
+            Bs.libraryOne.WriteLogAdmin(user_name, 1, "Limpió su consola personal...");
         }
 
         private void addAdmin_Click(object sender, EventArgs e)
@@ -106,7 +103,7 @@ namespace app.fomularios
             logicas logic = new logicas();
 
             consoleAdmin.AppendText("----------------------------------------" + Environment.NewLine);
-            consoleAdmin.AppendText(logic.Logs_txt(user_name, 4, "Realizó una solicitud para agregar un nuevo administrador", 1) + Environment.NewLine);
+            consoleAdmin.AppendText(Bs.libraryOne.WriteLogAdmin(user_name, 2, "Realizó una solicitud para agregar un nuevo administrador") + Environment.NewLine);
             consoleAdmin.AppendText("----------------------------------------" + Environment.NewLine);
             consoleAdmin.ScrollToCaret();
         }

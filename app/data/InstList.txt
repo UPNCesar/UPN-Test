@@ -1,1 +1,1 @@
-[ALERT:] (Acción irreversible) Blanco Reseteó la base de datos de reportes/reclamos
+[ALERT:] (Acción irreversible) Cesar Reseteó la base de datos de reportes/reclamos
