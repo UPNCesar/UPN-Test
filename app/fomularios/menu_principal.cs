@@ -15,7 +15,7 @@ namespace app.fomularios
     {
         private string app_nam;
         private string app_versio;
-        private string user_name;
+        //private string user_name;
 
 
         public menu_principal(string app_name, string app_version, bool opciones, string user_name)
@@ -24,6 +24,8 @@ namespace app.fomularios
 
             this.app_nam = app_name;
             this.app_versio = app_version;
+
+            hello.Text = $"Hola {user_name} ¿que quieres hacer hoy?";
 
             switch (opciones){
 
@@ -72,6 +74,11 @@ namespace app.fomularios
             access acceso = new access(boton, app_nam, app_versio);
 
             acceso.ShowDialog();
+        }
+
+        private void CloseAll_Click(object sender, EventArgs e)
+        {
+            this.Close();            
         }
     }
 }

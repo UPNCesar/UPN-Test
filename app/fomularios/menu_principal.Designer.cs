@@ -47,7 +47,9 @@
             this.login2 = new System.Windows.Forms.Button();
             this.TXTann = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.hello = new System.Windows.Forms.Label();
+            this.LeaveAcount = new System.Windows.Forms.Button();
+            this.CloseAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,21 +228,42 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // hello
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(609, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "img referencial aqui";
+            this.hello.AutoSize = true;
+            this.hello.Location = new System.Drawing.Point(52, 34);
+            this.hello.Name = "hello";
+            this.hello.Size = new System.Drawing.Size(98, 13);
+            this.hello.TabIndex = 29;
+            this.hello.Text = "img referencial aqui";
+            // 
+            // LeaveAcount
+            // 
+            this.LeaveAcount.Location = new System.Drawing.Point(716, 496);
+            this.LeaveAcount.Name = "LeaveAcount";
+            this.LeaveAcount.Size = new System.Drawing.Size(142, 23);
+            this.LeaveAcount.TabIndex = 30;
+            this.LeaveAcount.Text = "Cerrar sesión";
+            this.LeaveAcount.UseVisualStyleBackColor = true;
+            // 
+            // CloseAll
+            // 
+            this.CloseAll.Location = new System.Drawing.Point(553, 496);
+            this.CloseAll.Name = "CloseAll";
+            this.CloseAll.Size = new System.Drawing.Size(142, 23);
+            this.CloseAll.TabIndex = 31;
+            this.CloseAll.Text = "Cerrar aplicacion";
+            this.CloseAll.UseVisualStyleBackColor = true;
+            this.CloseAll.Click += new System.EventHandler(this.CloseAll_Click);
             // 
             // menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 531);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CloseAll);
+            this.Controls.Add(this.LeaveAcount);
+            this.Controls.Add(this.hello);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TXTann);
             this.Controls.Add(this.login2);
@@ -289,6 +312,8 @@
         private System.Windows.Forms.Button login2;
         private System.Windows.Forms.Label TXTann;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label hello;
+        private System.Windows.Forms.Button LeaveAcount;
+        private System.Windows.Forms.Button CloseAll;
     }
 }

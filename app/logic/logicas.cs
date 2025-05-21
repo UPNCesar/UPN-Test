@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using app.fomularios;
 using Microsoft.Win32;
 
 
@@ -18,47 +19,37 @@ namespace app.logic
 
 
 
-            if (Bs.libraryOne.VerifyWorldBlockList(user_name) != "") return "Error, El texto contiene términos restringidos. Por favor, utiliza un lenguaje adecuado.";
-
-            if (prePasswrd1 != prePasswrd2) return "Error, Las contraseñas no son iguales.";
-            
-
-
-            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
-            //D:\UPN-Test\app\data\userData.txt
-
-            for (int i = 0; i < user_basedata.Length; i++)
+            if (Bs.libraryOne.VerifyWorldBlockList(user_name) != "")
             {
-                string[] dato = user_basedata[i].Split(',');
+                return "Error, El texto contiene términos restringidos. Por favor, utiliza un lenguaje adecuado.";
+            }
 
-                if (dato[0] == user_name)
-                {
-
-                    return $"Error, el nombre {user_name} ya está en uso";
-                }
-                
-
+            if (prePasswrd1 != prePasswrd2)
+            {
+                return "Error, Las contraseñas no son iguales.";
             }
 
 
-
+            
+            if (Bs.libraryOne.SearchUsername(user_name) != "") return $"Error, el nombre {user_name} ya está en uso";
+   
+            
             
 
+            TextWriter registeruser = File.AppendText(@"D:\UPN-Test\app\data\userData.txt");
 
-            /*
-            variables a poner registro de TXT:
-                user_name
-                password
-                ID_user
-            */
+            registeruser.WriteLine($"{user_name},{prePasswrd1}");
+
+            registeruser.Close();
 
 
             return "";
+
         }
 
         public string login(string user_name, string prePasswrd1)
         {
-            string resultadoError = "";
+     
 
             if (user_name.ToLower() == "admin")
             {
@@ -75,11 +66,12 @@ namespace app.logic
                 
             }
             
-            //poner lectura de datos aqui  para el  login si se detecta capturaos en variables los datos
+            if(Bs.libraryOne.SearchPasswordAndUsername(prePasswrd1, user_name) != "")
+            { 
+                return "usuario"; 
+            }
+            else return "El usuario o contraseña ingresado son incorrectas";
 
-            
-
-            return resultadoError;
         }
 
 

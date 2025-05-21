@@ -73,6 +73,75 @@ namespace Bs
 
 
 
+        public static string SearchUsername(string user_name)
+        {
+            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            //D:\UPN-Test\app\data\userData.txt
+
+            for (int i = 0; i < user_basedata.Length; i++)
+            {
+                string[] dato = user_basedata[i].Split(',');
+
+                if (dato[0] == user_name)
+                {
+
+                    return $"Existe";
+                }
+
+                
+            }
+
+            return "";
+        }
+
+        public static string SearchPassword(string password)
+        {
+            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            //D:\UPN-Test\app\data\userData.txt
+
+            for (int i = 0; i < user_basedata.Length; i++)
+            {
+                string[] dato = user_basedata[i].Split(',');
+
+                if (dato[0] == password)
+                {
+
+                    return $"Existe";
+                }
+
+
+            }
+
+            return "";
+        }
+
+        public static string SearchPasswordAndUsername(string password, string user_name)
+        {
+            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            //D:\UPN-Test\app\data\userData.txt
+
+            for (int i = 0; i < user_basedata.Length; i++)
+            {
+                string[] dato = user_basedata[i].Split(',');
+
+                if (dato[0] == user_name)
+                {
+                    if (dato[1] == password)
+                    {
+
+                        return $"Existe";
+                    }
+                }
+
+
+            }
+
+            return "";
+        }
+
+
+
+
         public static string WriteLogAdmin(string user_name, short nivel, string message)
         {
             TextWriter admwrite = File.AppendText(@"D:\UPN-Test\app\data\AdmActions.txt");

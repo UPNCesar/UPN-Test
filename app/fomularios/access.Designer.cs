@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.registrarse = new System.Windows.Forms.Button();
             this.invitado = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // acceso
@@ -118,11 +119,22 @@
             this.invitado.UseVisualStyleBackColor = true;
             this.invitado.Click += new System.EventHandler(this.invitado_Click);
             // 
+            // cancel
+            // 
+            this.cancel.Location = new System.Drawing.Point(381, 192);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(74, 28);
+            this.cancel.TabIndex = 10;
+            this.cancel.Text = ">";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
             // access
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 232);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.invitado);
             this.Controls.Add(this.registrarse);
             this.Controls.Add(this.label3);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button registrarse;
         private System.Windows.Forms.Button invitado;
+        private System.Windows.Forms.Button cancel;
     }
 }

@@ -79,48 +79,66 @@ namespace app
             {
 
                 aplicacionadmin appad = new aplicacionadmin(app_name, app_version, resultadoError);
-
+                Form1 f1 = new Form1(app_name, app_version);
 
 
                 switch (resultadoError)
                 {
                     
                     case "Cesar":
-                        
-                        appad.ShowDialog();
 
+                        this.Hide();
+
+                        f1.Hide();
+                        appad.ShowDialog();
+                        
+                        this.Close();
           
                         break;
                     case "Blanco":
-                        
-                        appad.ShowDialog();
 
-          
+                        this.Hide();
+
+                        f1.Hide();
+                        appad.ShowDialog();
+                        
+                        this.Close();
+
                         break;
                     case "Luis":
-                        
-                        appad.ShowDialog();
 
-          
+                        this.Hide();
+
+                        f1.Hide();
+                        appad.ShowDialog();
+                        
+                        this.Close();
+
                         break;
-                    default:
+
+                    case "usuario":
                         bool opciones = true;
 
                         menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
 
-                        _menu.ShowDialog();
+                        this.Hide();
 
+                        f1.Hide();
+                        _menu.ShowDialog();
+                        
+                        this.Close();
+
+                        break;
+
+                    default:
+
+                        MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                         break;
                 }
             }
                
-            else
-            {
-                
-
-                MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+           
         }
 
         private void registrarse_Click(object sender, EventArgs e)
@@ -135,8 +153,12 @@ namespace app
 
                 menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
 
+                this.Hide();
+                Form1 f1 = new Form1(app_name, app_version);
+                f1.Hide();
                 _menu.ShowDialog();
-
+                
+                this.Close();
 
             }
         }
@@ -154,12 +176,22 @@ namespace app
 
                 menu_principal _menu = new menu_principal(app_name, app_version, opciones, user_n.Text);
 
+                this.Hide();
+                Form1 f1 = new Form1(app_name, app_version);
+                
+                f1.Hide();
                 _menu.ShowDialog();
-
+                
                 this.Close();
+
             }
 
 
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

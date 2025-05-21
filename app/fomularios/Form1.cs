@@ -38,7 +38,12 @@ namespace app
 
             access acceso = new access(boton, app_nam, app_versio);
 
+            
             acceso.ShowDialog();
+
+            
+
+            
 
         }
 
@@ -48,9 +53,10 @@ namespace app
             short boton = 1;
 
             access acceso = new access(boton, app_nam, app_versio);
-
+            
             acceso.ShowDialog();
             
+
         }
 
         
@@ -61,7 +67,11 @@ namespace app
 
             access acceso = new access(boton, app_nam,app_versio);
 
+            
+
             acceso.ShowDialog();
+
+            
         }
     }
 }
