@@ -94,6 +94,23 @@ namespace Bs
             return "";
         }
 
+
+        public static bool SearchInst(string inst_name)
+        {
+            string[] inst_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\InstList.txt");
+
+            for (int i = 0; i < inst_basedata.Length; i++)
+            {
+                string[] dato = inst_basedata[i].Split(',');
+
+                if (dato[0] == inst_name)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public static string SearchPassword(string password)
         {
             string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
@@ -172,7 +189,7 @@ namespace Bs
 
 
 
-        public static string VerifyWorldBlockList(string palabra)
+        public static bool VerifyWorldBlockList(string palabra)
         {
 
 
@@ -195,12 +212,12 @@ namespace Bs
                 if (palabra.ToLower() == word.ToLower())
                 {
 
-                    return "Error, El texto contiene términos restringidos. Por favor, utiliza un lenguaje adecuado.";
+                    return false;
 
                 }
             }
 
-            return "";
+            return true;
         }
     }
 }

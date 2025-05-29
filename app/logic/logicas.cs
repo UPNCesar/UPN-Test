@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace app.logic
 
 
 
-            if (Bs.libraryOne.VerifyWorldBlockList(user_name) != "")
+            if (!Bs.libraryOne.VerifyWorldBlockList(user_name))
             {
                 return "Error, El texto contiene términos restringidos. Por favor, utiliza un lenguaje adecuado.";
             }
@@ -44,6 +45,46 @@ namespace app.logic
 
 
             return "";
+        }
+
+        public string registroInst(string user_name, string inst_name, string CodigoModularstring, string password )
+        {
+
+
+            if (Bs.libraryOne.SearchUsername(user_name) == "") return $"Error, el nombre {user_name} no existe";
+
+            if (!Bs.libraryOne.VerifyWorldBlockList(inst_name))
+            {
+                return "Error, El nombre contiene términos restringidos. Por favor, utiliza un lenguaje adecuado.";
+            }
+
+            if (!Bs.libraryOne.SearchInst(inst_name)) return $"Error, el nombre {inst_name} ya está en uso";
+
+            int CodigoModular = 0;
+
+            try
+            {
+                CodigoModular = Convert.ToInt32(CodigoModularstring);
+            }
+            catch
+            {
+                return "Error, El código modular ingresado no son números";
+            }
+
+
+            if (CodigoModular < 999999 || CodigoModular > 1000000000)
+            {
+                return "Error, El código modular debe comprender de 7 a 9 dígitos";
+            }
+
+
+            TextWriter registeruser = File.AppendText(@"D:\UPN-Test\app\data\InstList.txt");
+
+            registeruser.WriteLine($"{user_name},{password},{inst_name},{CodigoModularstring},");
+
+            registeruser.Close();
+
+            return ""; 
 
         }
 

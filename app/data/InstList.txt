@@ -1,1 +1,2 @@
-[ALERT:] (Acción irreversible) Cesar Reseteó la base de datos de reportes/reclamos
+Nebuldev,cesar123,santa,1234567,
+Nebuldev,cesar123,dsda,1234567,

@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,35 +16,52 @@ namespace app.fomularios
     {
         private string app_nam;
         private string app_versio;
-        //private string user_name;
+        private string user_nam;
 
 
-        public menu_principal(string app_name, string app_version, bool opciones, string user_name)
+        public menu_principal(string app_name, string app_version, short opciones, string user_name)
         {
             InitializeComponent();
 
             this.app_nam = app_name;
             this.app_versio = app_version;
+            this.user_nam = user_name;
 
-            hello.Text = $"Hola {user_name} ¿que quieres hacer hoy?";
+            switch (opciones)
+            {
 
-            switch (opciones){
+                case 1:
 
-                case true:
+                    //-------------------------------------------------------------------------------------
+                    //-------------------------ACCEDIO A SU CUENTA USUARIO -----------
+                    //-------------------------------------------------------------------------------------
+                    //-------------------------------------------------------------------------------------
 
-                    Encuestas_inst.Enabled = false; //plan vip
+                    hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
                     register2.Visible = false;
                     login2.Visible = false;
-
-                    TXTann.Text = $"{user_name} Adquiere nuestro plan plus para obetenr beneficios";
-
-                    break;
-                case false:
+                    CloseAll.Text = "Cerrar sesión";
+                    TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
 
                     crear_inst.Visible = false;
                     unirse_inst.Visible=false;
+                    register2.Visible=false;
+                    login2.Visible=false;
 
-                    Tareas_inst.Enabled = false;
+                    break;
+                case 2:
+
+                    //-------------------------------------------------------------------------------------
+                    //----------------------------------------- MODO INVITADO --------------------------------------------
+                    //-------------------------------------------------------------------------------------
+
+                    hello.Text = $"Hola {user_nam} Debes iniciar sesión para desbloquear más funciones";
+                    crear_inst.Visible = false;
+                    unirse_inst.Visible = false;
+
+                    CloseAll.Visible = false;
+                    /*
+                    
                     asistencia_inst.Enabled = false;
                     personal_inst.Enabled = false;
                     inv_inst.Enabled = false;
@@ -52,33 +70,65 @@ namespace app.fomularios
                     sugerenci_inst.Enabled = false; 
                     reclamos_inst.Enabled = false;
 
-                    TXTann.Text = $"{user_name} inicia sesion para desbloquear más opciones";
+                    */
+                    TXTann.Text = $"{user_nam} inicia sesion para desbloquear más opciones";
+                    break;
+                case 3:
+                    //-------------------------------------------------------------------------------------
+                    //-------------------------ACCEDIO A SU CUENTA DE INST -----------
+                    //-------------------------------------------------------------------------------------
+                    //-------------------------------------------------------------------------------------
 
+                    hello.Text = $"Hola {user_nam} ¿que quieres hacer hoy?";
                     break;
             }
         }
 
         private void register2_Click(object sender, EventArgs e)
         {
-            short boton = 1;
 
-            access acceso = new access(boton, app_nam, app_versio);
-
+            access acceso = new access(1, app_nam, app_versio);
+            this.Hide();
             acceso.ShowDialog();
+            this.Close();
         }
 
         private void login2_Click(object sender, EventArgs e)
         {
-            short boton = 0;
-
-            access acceso = new access(boton, app_nam, app_versio);
-
+            access acceso = new access(0, app_nam, app_versio);
+            this.Hide();
             acceso.ShowDialog();
+
+            this.Close();
         }
 
         private void CloseAll_Click(object sender, EventArgs e)
         {
-            this.Close();            
+            this.Close();
+            
         }
+
+        private void ver_reunion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crear_inst_Click(object sender, EventArgs e)
+        {
+            access accesint = new access(3, app_nam, app_versio);
+            this.Hide();
+            accesint.ShowDialog();
+
+            this.Close();
+            
+
+        }
+
+        public void cerrarForm() 
+        {
+            this.Close();
+            
+        }
+
     }
 }
