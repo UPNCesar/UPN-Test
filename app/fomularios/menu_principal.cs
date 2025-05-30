@@ -17,15 +17,16 @@ namespace app.fomularios
         private string app_nam;
         private string app_versio;
         private string user_nam;
+        private string inst_nam;
 
-
-        public menu_principal(string app_name, string app_version, short opciones, string user_name)
+        public menu_principal(string app_name, string app_version, short opciones, string user_name, string inst_name)
         {
             InitializeComponent();
 
             this.app_nam = app_name;
             this.app_versio = app_version;
             this.user_nam = user_name;
+            this.inst_nam = inst_name;
 
             switch (opciones)
             {
@@ -40,11 +41,9 @@ namespace app.fomularios
                     hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
                     register2.Visible = false;
                     login2.Visible = false;
-                    CloseAll.Text = "Cerrar sesión";
-                    TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
 
-                    crear_inst.Visible = false;
-                    unirse_inst.Visible=false;
+                    TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
+                    this.Text = $"{app_name} {app_version}";
                     register2.Visible=false;
                     login2.Visible=false;
 
@@ -58,28 +57,24 @@ namespace app.fomularios
                     hello.Text = $"Hola {user_nam} Debes iniciar sesión para desbloquear más funciones";
                     crear_inst.Visible = false;
                     unirse_inst.Visible = false;
-
-                    CloseAll.Visible = false;
-                    /*
+                    this.Text = $"{app_name} {app_version}";
+      
                     
-                    asistencia_inst.Enabled = false;
-                    personal_inst.Enabled = false;
-                    inv_inst.Enabled = false;
-                    Encuestas_inst.Enabled = false; //plan vip
-                    Anuncios_inst.Enabled = false;
-                    sugerenci_inst.Enabled = false; 
-                    reclamos_inst.Enabled = false;
-
-                    */
                     TXTann.Text = $"{user_nam} inicia sesion para desbloquear más opciones";
                     break;
                 case 3:
                     //-------------------------------------------------------------------------------------
-                    //-------------------------ACCEDIO A SU CUENTA DE INST -----------
+                    //-------------------------ACCEDIO A SU CUENTA DE DIRECTOR -----------
                     //-------------------------------------------------------------------------------------
                     //-------------------------------------------------------------------------------------
 
-                    hello.Text = $"Hola {user_nam} ¿que quieres hacer hoy?";
+                    hello.Text = $"Hola Sñr. Director {user_nam} ¿que desea hacer hoy?";
+                    this.Text = $"{app_name} {app_version} | I.E. {inst_nam} ";
+                    crear_inst.Visible = false;
+                    unirse_inst.Visible = false;
+                    register2.Visible = false;
+                    login2.Visible = false;
+
                     break;
             }
         }
@@ -87,7 +82,7 @@ namespace app.fomularios
         private void register2_Click(object sender, EventArgs e)
         {
 
-            access acceso = new access(1, app_nam, app_versio);
+            access acceso = new access(1, app_nam, app_versio, user_nam);
             this.Hide();
             acceso.ShowDialog();
             this.Close();
@@ -95,7 +90,7 @@ namespace app.fomularios
 
         private void login2_Click(object sender, EventArgs e)
         {
-            access acceso = new access(0, app_nam, app_versio);
+            access acceso = new access(0, app_nam, app_versio, user_nam);
             this.Hide();
             acceso.ShowDialog();
 
@@ -105,7 +100,6 @@ namespace app.fomularios
         private void CloseAll_Click(object sender, EventArgs e)
         {
             this.Close();
-            
         }
 
         private void ver_reunion_Click(object sender, EventArgs e)
@@ -115,7 +109,7 @@ namespace app.fomularios
 
         private void crear_inst_Click(object sender, EventArgs e)
         {
-            access accesint = new access(3, app_nam, app_versio);
+            access accesint = new access(3, app_nam, app_versio, user_nam);
             this.Hide();
             accesint.ShowDialog();
 
@@ -130,5 +124,34 @@ namespace app.fomularios
             
         }
 
+        private void unirse_inst_Click(object sender, EventArgs e)
+        {
+            access accesint = new access(4, app_nam, app_versio, user_nam);
+            this.Hide();
+            accesint.ShowDialog();
+
+            this.Close();
+        }
+
+        private void Leave_inst_Click(object sender, EventArgs e)
+        {
+            hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
+            register2.Visible = false;
+            login2.Visible = false;
+
+            TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
+            this.Text = $"{app_nam} {app_versio}";
+            register2.Visible = false;
+            login2.Visible = false;
+
+            crear_inst.Visible = true;
+            unirse_inst.Visible = true;
+            Leave_inst.Visible = false;
+        }
+
+        private void Olvido_code_inst_Click(object sender, EventArgs e)
+        {
+            //Proceso para recuperar código institucional.
+        }
     }
 }

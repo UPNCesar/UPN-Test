@@ -4,6 +4,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,11 +48,11 @@ namespace app.logic
             return "";
         }
 
-        public string registroInst(string user_name, string inst_name, string CodigoModularstring, string password )
+        public string registroInst(string user_name, string inst_name, string CodigoModularstring)
         {
 
 
-            if (Bs.libraryOne.SearchUsername(user_name) == "") return $"Error, el nombre {user_name} no existe";
+         
 
             if (!Bs.libraryOne.VerifyWorldBlockList(inst_name))
             {
@@ -77,13 +78,6 @@ namespace app.logic
                 return "Error, El código modular debe comprender de 7 a 9 dígitos";
             }
 
-
-            TextWriter registeruser = File.AppendText(@"D:\UPN-Test\app\data\InstList.txt");
-
-            registeruser.WriteLine($"{user_name},{password},{inst_name},{CodigoModularstring},");
-
-            registeruser.Close();
-
             return ""; 
 
         }
@@ -107,18 +101,20 @@ namespace app.logic
                 
             }
             
-            if(Bs.libraryOne.SearchPasswordAndUsername(prePasswrd1, user_name) != "")
+            if(Bs.libraryOne.SearchPasswordAndUsername(prePasswrd1, user_name))
             { 
                 return "usuario"; 
             }
-            else return "El usuario o contraseña ingresado son incorrectas";
+            else return "El usuario o contraseña ingresados son incorrectas";
 
         }
 
 
+     
 
 
 
-        
+
+
     }
 }

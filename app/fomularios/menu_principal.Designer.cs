@@ -46,6 +46,8 @@
             this.asistencia_mi_hijo = new System.Windows.Forms.Button();
             this.Agenda_mi_hijo = new System.Windows.Forms.Button();
             this.Reportar_problema_app = new System.Windows.Forms.Button();
+            this.Leave_inst = new System.Windows.Forms.Button();
+            this.Olvido_code_inst = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // crear_inst
@@ -66,6 +68,7 @@
             this.unirse_inst.TabIndex = 11;
             this.unirse_inst.Text = "unirse a una institución";
             this.unirse_inst.UseVisualStyleBackColor = true;
+            this.unirse_inst.Click += new System.EventHandler(this.unirse_inst_Click);
             // 
             // register2
             // 
@@ -107,12 +110,13 @@
             // 
             // CloseAll
             // 
+            this.CloseAll.BackColor = System.Drawing.Color.IndianRed;
             this.CloseAll.Location = new System.Drawing.Point(716, 496);
             this.CloseAll.Name = "CloseAll";
             this.CloseAll.Size = new System.Drawing.Size(142, 23);
             this.CloseAll.TabIndex = 31;
-            this.CloseAll.Text = "Cerrar sesión";
-            this.CloseAll.UseVisualStyleBackColor = true;
+            this.CloseAll.Text = "Cerrar aplicación";
+            this.CloseAll.UseVisualStyleBackColor = false;
             this.CloseAll.Click += new System.EventHandler(this.CloseAll_Click);
             // 
             // Reg_Alumnos
@@ -215,11 +219,34 @@
             this.Reportar_problema_app.Text = "Reportar  un bug de la aplicacion";
             this.Reportar_problema_app.UseVisualStyleBackColor = true;
             // 
+            // Leave_inst
+            // 
+            this.Leave_inst.BackColor = System.Drawing.Color.IndianRed;
+            this.Leave_inst.Location = new System.Drawing.Point(544, 496);
+            this.Leave_inst.Name = "Leave_inst";
+            this.Leave_inst.Size = new System.Drawing.Size(142, 23);
+            this.Leave_inst.TabIndex = 46;
+            this.Leave_inst.Text = "Salir de la I.E.";
+            this.Leave_inst.UseVisualStyleBackColor = false;
+            this.Leave_inst.Click += new System.EventHandler(this.Leave_inst_Click);
+            // 
+            // Olvido_code_inst
+            // 
+            this.Olvido_code_inst.Location = new System.Drawing.Point(425, 496);
+            this.Olvido_code_inst.Name = "Olvido_code_inst";
+            this.Olvido_code_inst.Size = new System.Drawing.Size(261, 23);
+            this.Olvido_code_inst.TabIndex = 47;
+            this.Olvido_code_inst.Text = "¿Olvidaste tu código de acceso institucional?";
+            this.Olvido_code_inst.UseVisualStyleBackColor = true;
+            this.Olvido_code_inst.Click += new System.EventHandler(this.Olvido_code_inst_Click);
+            // 
             // menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 531);
+            this.Controls.Add(this.Olvido_code_inst);
+            this.Controls.Add(this.Leave_inst);
             this.Controls.Add(this.Reportar_problema_app);
             this.Controls.Add(this.Agenda_mi_hijo);
             this.Controls.Add(this.asistencia_mi_hijo);
@@ -265,5 +292,7 @@
         private System.Windows.Forms.Button asistencia_mi_hijo;
         private System.Windows.Forms.Button Agenda_mi_hijo;
         private System.Windows.Forms.Button Reportar_problema_app;
+        private System.Windows.Forms.Button Leave_inst;
+        private System.Windows.Forms.Button Olvido_code_inst;
     }
 }

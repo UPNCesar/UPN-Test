@@ -37,10 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.registrarse = new System.Windows.Forms.Button();
             this.invitado = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
+            this.cancel_access_menupinricpal = new System.Windows.Forms.Button();
             this.Create_institucion = new System.Windows.Forms.Button();
             this.password3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.acceso_inst = new System.Windows.Forms.Button();
+            this.cancelar_acces_form = new System.Windows.Forms.Button();
+            this.cancelar_join_invitado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // acceso
@@ -122,15 +125,15 @@
             this.invitado.UseVisualStyleBackColor = true;
             this.invitado.Click += new System.EventHandler(this.invitado_Click);
             // 
-            // cancel
+            // cancel_access_menupinricpal
             // 
-            this.cancel.Location = new System.Drawing.Point(381, 192);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(74, 28);
-            this.cancel.TabIndex = 10;
-            this.cancel.Text = "Cancelar";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            this.cancel_access_menupinricpal.Location = new System.Drawing.Point(381, 192);
+            this.cancel_access_menupinricpal.Name = "cancel_access_menupinricpal";
+            this.cancel_access_menupinricpal.Size = new System.Drawing.Size(74, 28);
+            this.cancel_access_menupinricpal.TabIndex = 10;
+            this.cancel_access_menupinricpal.Text = "Cancelar";
+            this.cancel_access_menupinricpal.UseVisualStyleBackColor = true;
+            this.cancel_access_menupinricpal.Click += new System.EventHandler(this.cancel_Click);
             // 
             // Create_institucion
             // 
@@ -158,15 +161,48 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "label1";
             // 
+            // acceso_inst
+            // 
+            this.acceso_inst.Location = new System.Drawing.Point(150, 182);
+            this.acceso_inst.Name = "acceso_inst";
+            this.acceso_inst.Size = new System.Drawing.Size(142, 23);
+            this.acceso_inst.TabIndex = 14;
+            this.acceso_inst.Text = "inst";
+            this.acceso_inst.UseVisualStyleBackColor = true;
+            this.acceso_inst.Click += new System.EventHandler(this.acceso_inst_Click);
+            // 
+            // cancelar_acces_form
+            // 
+            this.cancelar_acces_form.Location = new System.Drawing.Point(381, 24);
+            this.cancelar_acces_form.Name = "cancelar_acces_form";
+            this.cancelar_acces_form.Size = new System.Drawing.Size(74, 28);
+            this.cancelar_acces_form.TabIndex = 15;
+            this.cancelar_acces_form.Text = "Cancelar";
+            this.cancelar_acces_form.UseVisualStyleBackColor = true;
+            this.cancelar_acces_form.Click += new System.EventHandler(this.cancelar_invitado_Click);
+            // 
+            // cancelar_join_invitado
+            // 
+            this.cancelar_join_invitado.Location = new System.Drawing.Point(23, 190);
+            this.cancelar_join_invitado.Name = "cancelar_join_invitado";
+            this.cancelar_join_invitado.Size = new System.Drawing.Size(74, 28);
+            this.cancelar_join_invitado.TabIndex = 16;
+            this.cancelar_join_invitado.Text = "Cancelar";
+            this.cancelar_join_invitado.UseVisualStyleBackColor = true;
+            this.cancelar_join_invitado.Click += new System.EventHandler(this.cancelar_join_invitado_Click);
+            // 
             // access
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 232);
+            this.Controls.Add(this.cancelar_join_invitado);
+            this.Controls.Add(this.cancelar_acces_form);
+            this.Controls.Add(this.acceso_inst);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.password3);
             this.Controls.Add(this.Create_institucion);
-            this.Controls.Add(this.cancel);
+            this.Controls.Add(this.cancel_access_menupinricpal);
             this.Controls.Add(this.invitado);
             this.Controls.Add(this.registrarse);
             this.Controls.Add(this.label3);
@@ -194,9 +230,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button registrarse;
         private System.Windows.Forms.Button invitado;
-        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button cancel_access_menupinricpal;
         private System.Windows.Forms.Button Create_institucion;
         private System.Windows.Forms.TextBox password3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button acceso_inst;
+        private System.Windows.Forms.Button cancelar_acces_form;
+        private System.Windows.Forms.Button cancelar_join_invitado;
     }
 }

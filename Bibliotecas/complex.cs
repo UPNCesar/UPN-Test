@@ -111,6 +111,42 @@ namespace Bs
             return true;
         }
 
+        public static string GenerateCodigoInst(string user_name, string inst_name, string CodigoModularstring)
+        {
+            Random rand = new Random();
+            string variable = Convert.ToString(rand.Next(10000, 100000));
+
+            TextWriter registeruser = File.AppendText(@"D:\UPN-Test\app\data\InstList.txt");
+
+            registeruser.WriteLine($"{user_name},{inst_name},{CodigoModularstring},{variable}");
+
+            registeruser.Close();
+
+            return variable;
+        }
+        public static string SearchInstAndUSer(string user_name, string CodigoModularstring, string digit)
+        {
+            string[] inst_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\InstList.txt");
+
+            for (int i = 0; i < inst_basedata.Length; i++)
+            {
+                string[] dato = inst_basedata[i].Split(',');
+
+                if (dato[0] == user_name)
+                {
+                    if (dato[2] == CodigoModularstring)
+                    {
+                        if (dato[3] == digit)
+                        {
+                            return dato[1];
+                        }
+                    }
+                    
+                }
+            }
+            return "";
+        }
+
         public static string SearchPassword(string password)
         {
             string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
@@ -132,7 +168,7 @@ namespace Bs
             return "";
         }
 
-        public static string SearchPasswordAndUsername(string password, string user_name)
+        public static bool SearchPasswordAndUsername(string password, string user_name)
         {
             string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
             //D:\UPN-Test\app\data\userData.txt
@@ -146,14 +182,14 @@ namespace Bs
                     if (dato[1] == password)
                     {
 
-                        return $"Existe";
+                        return true;
                     }
                 }
 
 
             }
 
-            return "";
+            return false;
         }
 
 
