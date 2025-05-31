@@ -12,7 +12,8 @@ namespace Bs
 
         public static string AdminResetdb(string user_name)
         {
-            TextWriter AdmReset = new StreamWriter(@"D:\UPN-Test\app\data\AdmActions.txt");
+            TextWriter AdmReset = new StreamWriter(@"C:\UPN-Test\app\data\AdmActions.txt");
+            // 
 
             AdmReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores");
 
@@ -24,7 +25,7 @@ namespace Bs
 
         public static string UserResetdb(string user_name)
         {
-            TextWriter UserReset = new StreamWriter(@"D:\UPN-Test\app\data\userData.txt");
+            TextWriter UserReset = new StreamWriter(@"C:\UPN-Test\app\data\userData.txt");
 
             UserReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios");
 
@@ -36,7 +37,7 @@ namespace Bs
 
         public static string IntitucionResetdb(string user_name)
         {
-            TextWriter InstReset = new StreamWriter(@"D:\UPN-Test\app\data\InstList.txt");
+            TextWriter InstReset = new StreamWriter(@"C:\UPN-Test\app\data\InstList.txt");
 
             InstReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de instituciones");
 
@@ -62,7 +63,7 @@ namespace Bs
 
         public static string ReportsToBugs(string user_name, string message)
         {
-            TextWriter reportes = File.AppendText(@"D:\UPN-Test\app\data\AdmActions.txt");
+            TextWriter reportes = File.AppendText(@"C:\UPN-Test\app\data\AdmActions.txt");
 
             reportes.WriteLine($"[Reporte de {user_name}:] {message}");
 
@@ -75,7 +76,7 @@ namespace Bs
 
         public static string SearchUsername(string user_name)
         {
-            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            string[] user_basedata = File.ReadAllLines(@"C:\UPN-Test\app\data\userData.txt");
             //D:\UPN-Test\app\data\userData.txt
 
             for (int i = 0; i < user_basedata.Length; i++)
@@ -97,7 +98,7 @@ namespace Bs
 
         public static bool SearchInst(string inst_name)
         {
-            string[] inst_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\InstList.txt");
+            string[] inst_basedata = File.ReadAllLines(@"C:\UPN-Test\app\data\InstList.txt");
 
             for (int i = 0; i < inst_basedata.Length; i++)
             {
@@ -116,7 +117,7 @@ namespace Bs
             Random rand = new Random();
             string variable = Convert.ToString(rand.Next(10000, 100000));
 
-            TextWriter registeruser = File.AppendText(@"D:\UPN-Test\app\data\InstList.txt");
+            TextWriter registeruser = File.AppendText(@"C:\UPN-Test\app\data\InstList.txt");
 
             registeruser.WriteLine($"{user_name},{inst_name},{CodigoModularstring},{variable}");
 
@@ -126,7 +127,7 @@ namespace Bs
         }
         public static string SearchInstAndUSer(string user_name, string CodigoModularstring, string digit)
         {
-            string[] inst_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\InstList.txt");
+            string[] inst_basedata = File.ReadAllLines(@"C:\UPN-Test\app\data\InstList.txt");
 
             for (int i = 0; i < inst_basedata.Length; i++)
             {
@@ -170,7 +171,7 @@ namespace Bs
 
         public static bool SearchPasswordAndUsername(string password, string user_name)
         {
-            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            string[] user_basedata = File.ReadAllLines(@"C:\UPN-Test\app\data\userData.txt");
             //D:\UPN-Test\app\data\userData.txt
 
             for (int i = 0; i < user_basedata.Length; i++)
@@ -197,7 +198,7 @@ namespace Bs
 
         public static string WriteLogAdmin(string user_name, short nivel, string message)
         {
-            TextWriter admwrite = File.AppendText(@"D:\UPN-Test\app\data\AdmActions.txt");
+            TextWriter admwrite = File.AppendText(@"C:\UPN-Test\app\data\AdmActions.txt");
             switch (nivel)
             {
                 case 1:

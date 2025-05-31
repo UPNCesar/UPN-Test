@@ -52,9 +52,10 @@
             // 
             // crear_inst
             // 
-            this.crear_inst.Location = new System.Drawing.Point(499, 24);
+            this.crear_inst.Location = new System.Drawing.Point(665, 30);
+            this.crear_inst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crear_inst.Name = "crear_inst";
-            this.crear_inst.Size = new System.Drawing.Size(142, 23);
+            this.crear_inst.Size = new System.Drawing.Size(189, 28);
             this.crear_inst.TabIndex = 10;
             this.crear_inst.Text = "crear institucion";
             this.crear_inst.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // unirse_inst
             // 
-            this.unirse_inst.Location = new System.Drawing.Point(656, 24);
+            this.unirse_inst.Location = new System.Drawing.Point(875, 30);
+            this.unirse_inst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.unirse_inst.Name = "unirse_inst";
-            this.unirse_inst.Size = new System.Drawing.Size(142, 23);
+            this.unirse_inst.Size = new System.Drawing.Size(189, 28);
             this.unirse_inst.TabIndex = 11;
             this.unirse_inst.Text = "unirse a una institución";
             this.unirse_inst.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             // register2
             // 
-            this.register2.Location = new System.Drawing.Point(499, 53);
+            this.register2.Location = new System.Drawing.Point(665, 65);
+            this.register2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.register2.Name = "register2";
-            this.register2.Size = new System.Drawing.Size(142, 23);
+            this.register2.Size = new System.Drawing.Size(189, 28);
             this.register2.TabIndex = 25;
             this.register2.Text = "Crear cuenta";
             this.register2.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // 
             // login2
             // 
-            this.login2.Location = new System.Drawing.Point(656, 53);
+            this.login2.Location = new System.Drawing.Point(875, 65);
+            this.login2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.login2.Name = "login2";
-            this.login2.Size = new System.Drawing.Size(142, 23);
+            this.login2.Size = new System.Drawing.Size(189, 28);
             this.login2.TabIndex = 26;
             this.login2.Text = "Acceder a mi cuenta";
             this.login2.UseVisualStyleBackColor = true;
@@ -93,27 +97,30 @@
             // TXTann
             // 
             this.TXTann.AutoSize = true;
-            this.TXTann.Location = new System.Drawing.Point(12, 506);
+            this.TXTann.Location = new System.Drawing.Point(16, 623);
+            this.TXTann.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TXTann.Name = "TXTann";
-            this.TXTann.Size = new System.Drawing.Size(251, 13);
+            this.TXTann.Size = new System.Drawing.Size(313, 16);
             this.TXTann.TabIndex = 27;
             this.TXTann.Text = "Desbloquea más funciones accediendo a tu cuenta";
             // 
             // hello
             // 
             this.hello.AutoSize = true;
-            this.hello.Location = new System.Drawing.Point(28, 29);
+            this.hello.Location = new System.Drawing.Point(37, 36);
+            this.hello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hello.Name = "hello";
-            this.hello.Size = new System.Drawing.Size(75, 13);
+            this.hello.Size = new System.Drawing.Size(92, 16);
             this.hello.TabIndex = 29;
             this.hello.Text = "texto welcome";
             // 
             // CloseAll
             // 
             this.CloseAll.BackColor = System.Drawing.Color.IndianRed;
-            this.CloseAll.Location = new System.Drawing.Point(716, 496);
+            this.CloseAll.Location = new System.Drawing.Point(955, 610);
+            this.CloseAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CloseAll.Name = "CloseAll";
-            this.CloseAll.Size = new System.Drawing.Size(142, 23);
+            this.CloseAll.Size = new System.Drawing.Size(189, 28);
             this.CloseAll.TabIndex = 31;
             this.CloseAll.Text = "Cerrar aplicación";
             this.CloseAll.UseVisualStyleBackColor = false;
@@ -121,36 +128,41 @@
             // 
             // Reg_Alumnos
             // 
-            this.Reg_Alumnos.Location = new System.Drawing.Point(458, 299);
+            this.Reg_Alumnos.Location = new System.Drawing.Point(611, 368);
+            this.Reg_Alumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Reg_Alumnos.Name = "Reg_Alumnos";
-            this.Reg_Alumnos.Size = new System.Drawing.Size(151, 23);
+            this.Reg_Alumnos.Size = new System.Drawing.Size(201, 28);
             this.Reg_Alumnos.TabIndex = 33;
             this.Reg_Alumnos.Text = "Registro de alumnos/padres";
             this.Reg_Alumnos.UseVisualStyleBackColor = true;
             // 
             // Agenda_alum
             // 
-            this.Agenda_alum.Location = new System.Drawing.Point(259, 252);
+            this.Agenda_alum.Location = new System.Drawing.Point(345, 368);
+            this.Agenda_alum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agenda_alum.Name = "Agenda_alum";
-            this.Agenda_alum.Size = new System.Drawing.Size(142, 23);
+            this.Agenda_alum.Size = new System.Drawing.Size(189, 28);
             this.Agenda_alum.TabIndex = 34;
             this.Agenda_alum.Text = "Agenda alumnos";
             this.Agenda_alum.UseVisualStyleBackColor = true;
             // 
             // Asistencia_alum
             // 
-            this.Asistencia_alum.Location = new System.Drawing.Point(259, 298);
+            this.Asistencia_alum.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Asistencia_alum.Location = new System.Drawing.Point(345, 310);
+            this.Asistencia_alum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Asistencia_alum.Name = "Asistencia_alum";
-            this.Asistencia_alum.Size = new System.Drawing.Size(142, 23);
+            this.Asistencia_alum.Size = new System.Drawing.Size(189, 28);
             this.Asistencia_alum.TabIndex = 35;
             this.Asistencia_alum.Text = "Asistencias alumnos";
-            this.Asistencia_alum.UseVisualStyleBackColor = true;
+            this.Asistencia_alum.UseVisualStyleBackColor = false;
             // 
             // ver_reunion
             // 
-            this.ver_reunion.Location = new System.Drawing.Point(31, 159);
+            this.ver_reunion.Location = new System.Drawing.Point(41, 196);
+            this.ver_reunion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ver_reunion.Name = "ver_reunion";
-            this.ver_reunion.Size = new System.Drawing.Size(569, 23);
+            this.ver_reunion.Size = new System.Drawing.Size(759, 28);
             this.ver_reunion.TabIndex = 36;
             this.ver_reunion.Text = "Reuniones pendientes";
             this.ver_reunion.UseVisualStyleBackColor = true;
@@ -158,63 +170,73 @@
             // 
             // View_Solicitud
             // 
-            this.View_Solicitud.Location = new System.Drawing.Point(259, 345);
+            this.View_Solicitud.Location = new System.Drawing.Point(345, 425);
+            this.View_Solicitud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.View_Solicitud.Name = "View_Solicitud";
-            this.View_Solicitud.Size = new System.Drawing.Size(350, 23);
+            this.View_Solicitud.Size = new System.Drawing.Size(467, 28);
             this.View_Solicitud.TabIndex = 38;
             this.View_Solicitud.Text = "Ver Solicitudes";
             this.View_Solicitud.UseVisualStyleBackColor = true;
             // 
             // crear_reuniones
             // 
-            this.crear_reuniones.Location = new System.Drawing.Point(259, 389);
+            this.crear_reuniones.Location = new System.Drawing.Point(345, 479);
+            this.crear_reuniones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crear_reuniones.Name = "crear_reuniones";
-            this.crear_reuniones.Size = new System.Drawing.Size(350, 23);
+            this.crear_reuniones.Size = new System.Drawing.Size(467, 28);
             this.crear_reuniones.TabIndex = 41;
             this.crear_reuniones.Text = "nueva reunion";
             this.crear_reuniones.UseVisualStyleBackColor = true;
             // 
             // Asistencias_generales
             // 
-            this.Asistencias_generales.Location = new System.Drawing.Point(458, 252);
+            this.Asistencias_generales.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Asistencias_generales.Location = new System.Drawing.Point(611, 310);
+            this.Asistencias_generales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Asistencias_generales.Name = "Asistencias_generales";
-            this.Asistencias_generales.Size = new System.Drawing.Size(142, 23);
+            this.Asistencias_generales.Size = new System.Drawing.Size(189, 28);
             this.Asistencias_generales.TabIndex = 40;
             this.Asistencias_generales.Text = "Asistencias colegio";
-            this.Asistencias_generales.UseVisualStyleBackColor = true;
+            this.Asistencias_generales.UseVisualStyleBackColor = false;
+            this.Asistencias_generales.Click += new System.EventHandler(this.Asistencias_generales_Click);
             // 
             // Realizar_solicitud
             // 
-            this.Realizar_solicitud.Location = new System.Drawing.Point(31, 205);
+            this.Realizar_solicitud.Location = new System.Drawing.Point(41, 252);
+            this.Realizar_solicitud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Realizar_solicitud.Name = "Realizar_solicitud";
-            this.Realizar_solicitud.Size = new System.Drawing.Size(370, 23);
+            this.Realizar_solicitud.Size = new System.Drawing.Size(493, 28);
             this.Realizar_solicitud.TabIndex = 39;
             this.Realizar_solicitud.Text = "Realizar solicitud";
             this.Realizar_solicitud.UseVisualStyleBackColor = true;
             // 
             // asistencia_mi_hijo
             // 
-            this.asistencia_mi_hijo.Location = new System.Drawing.Point(31, 251);
+            this.asistencia_mi_hijo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.asistencia_mi_hijo.Location = new System.Drawing.Point(41, 309);
+            this.asistencia_mi_hijo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.asistencia_mi_hijo.Name = "asistencia_mi_hijo";
-            this.asistencia_mi_hijo.Size = new System.Drawing.Size(167, 23);
+            this.asistencia_mi_hijo.Size = new System.Drawing.Size(223, 28);
             this.asistencia_mi_hijo.TabIndex = 43;
             this.asistencia_mi_hijo.Text = "Asistencia de mi hijo";
-            this.asistencia_mi_hijo.UseVisualStyleBackColor = true;
+            this.asistencia_mi_hijo.UseVisualStyleBackColor = false;
             // 
             // Agenda_mi_hijo
             // 
-            this.Agenda_mi_hijo.Location = new System.Drawing.Point(31, 299);
+            this.Agenda_mi_hijo.Location = new System.Drawing.Point(41, 368);
+            this.Agenda_mi_hijo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Agenda_mi_hijo.Name = "Agenda_mi_hijo";
-            this.Agenda_mi_hijo.Size = new System.Drawing.Size(167, 23);
+            this.Agenda_mi_hijo.Size = new System.Drawing.Size(223, 28);
             this.Agenda_mi_hijo.TabIndex = 44;
             this.Agenda_mi_hijo.Text = "agenda de mi hijo";
             this.Agenda_mi_hijo.UseVisualStyleBackColor = true;
             // 
             // Reportar_problema_app
             // 
-            this.Reportar_problema_app.Location = new System.Drawing.Point(31, 440);
+            this.Reportar_problema_app.Location = new System.Drawing.Point(41, 542);
+            this.Reportar_problema_app.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Reportar_problema_app.Name = "Reportar_problema_app";
-            this.Reportar_problema_app.Size = new System.Drawing.Size(578, 23);
+            this.Reportar_problema_app.Size = new System.Drawing.Size(771, 28);
             this.Reportar_problema_app.TabIndex = 45;
             this.Reportar_problema_app.Text = "Reportar  un bug de la aplicacion";
             this.Reportar_problema_app.UseVisualStyleBackColor = true;
@@ -222,9 +244,10 @@
             // Leave_inst
             // 
             this.Leave_inst.BackColor = System.Drawing.Color.IndianRed;
-            this.Leave_inst.Location = new System.Drawing.Point(544, 496);
+            this.Leave_inst.Location = new System.Drawing.Point(725, 610);
+            this.Leave_inst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Leave_inst.Name = "Leave_inst";
-            this.Leave_inst.Size = new System.Drawing.Size(142, 23);
+            this.Leave_inst.Size = new System.Drawing.Size(189, 28);
             this.Leave_inst.TabIndex = 46;
             this.Leave_inst.Text = "Salir de la I.E.";
             this.Leave_inst.UseVisualStyleBackColor = false;
@@ -232,9 +255,10 @@
             // 
             // Olvido_code_inst
             // 
-            this.Olvido_code_inst.Location = new System.Drawing.Point(425, 496);
+            this.Olvido_code_inst.Location = new System.Drawing.Point(567, 610);
+            this.Olvido_code_inst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Olvido_code_inst.Name = "Olvido_code_inst";
-            this.Olvido_code_inst.Size = new System.Drawing.Size(261, 23);
+            this.Olvido_code_inst.Size = new System.Drawing.Size(348, 28);
             this.Olvido_code_inst.TabIndex = 47;
             this.Olvido_code_inst.Text = "¿Olvidaste tu código de acceso institucional?";
             this.Olvido_code_inst.UseVisualStyleBackColor = true;
@@ -242,9 +266,9 @@
             // 
             // menu_principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 531);
+            this.ClientSize = new System.Drawing.Size(1160, 654);
             this.Controls.Add(this.Olvido_code_inst);
             this.Controls.Add(this.Leave_inst);
             this.Controls.Add(this.Reportar_problema_app);
@@ -265,6 +289,7 @@
             this.Controls.Add(this.register2);
             this.Controls.Add(this.unirse_inst);
             this.Controls.Add(this.crear_inst);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "menu_principal";
             this.Text = "menu";
             this.ResumeLayout(false);

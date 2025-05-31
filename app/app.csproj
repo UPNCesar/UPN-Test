@@ -58,6 +58,12 @@
     <Compile Include="fomularios\aplicacionadmin.Designer.cs">
       <DependentUpon>aplicacionadmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fomularios\asisteas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\asisteas.Designer.cs">
+      <DependentUpon>asisteas.cs</DependentUpon>
+    </Compile>
     <Compile Include="fomularios\console.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\aplicacionadmin.resx">
       <DependentUpon>aplicacionadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fomularios\asisteas.resx">
+      <DependentUpon>asisteas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\console.resx">
       <DependentUpon>console.cs</DependentUpon>

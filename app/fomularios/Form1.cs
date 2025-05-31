@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,15 +13,17 @@ namespace app
 {
     public partial class Form1 : Form
     {
+
+    
         private string app_nam;
         private string app_versio;
-
+        
         //defininicion de var como instancia
 
         public Form1(string app_name, string app_version)
         {
             
-            InitializeComponent();
+            InitializeComponent();  
 
             this.Text = $"{app_name} {app_version}";
 
@@ -52,6 +55,7 @@ namespace app
         {
             access acceso = new access(2, app_nam,app_versio, "");
 
+            
             this.Hide();
             acceso.ShowDialog(); 
             this.Close();
