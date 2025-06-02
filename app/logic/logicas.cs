@@ -84,23 +84,7 @@ namespace app.logic
 
         public string login(string user_name, string prePasswrd1)
         {
-     
 
-            if (user_name.ToLower() == "admin")
-            {
-                switch (prePasswrd1)
-                {
-                    case "AdminCesar2014.":
-
-                        return $"Cesar";
-                    case "AdminBlanco2025.":
-                        return $"Blanco";
-                    case "AdminLuis2034.":
-                        return $"Luis";
-                }
-                
-            }
-            
             if(Bs.libraryOne.SearchPasswordAndUsername(prePasswrd1, user_name))
             { 
                 return "usuario"; 

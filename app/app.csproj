@@ -52,23 +52,11 @@
     <Compile Include="fomularios\access.Designer.cs">
       <DependentUpon>access.cs</DependentUpon>
     </Compile>
-    <Compile Include="fomularios\aplicacionadmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fomularios\aplicacionadmin.Designer.cs">
-      <DependentUpon>aplicacionadmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="fomularios\asisteas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fomularios\asisteas.Designer.cs">
       <DependentUpon>asisteas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fomularios\console.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fomularios\console.Designer.cs">
-      <DependentUpon>console.cs</DependentUpon>
     </Compile>
     <Compile Include="fomularios\Form1.cs">
       <SubType>Form</SubType>
@@ -88,14 +76,8 @@
     <EmbeddedResource Include="fomularios\access.resx">
       <DependentUpon>access.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fomularios\aplicacionadmin.resx">
-      <DependentUpon>aplicacionadmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fomularios\asisteas.resx">
       <DependentUpon>asisteas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fomularios\console.resx">
-      <DependentUpon>console.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -132,7 +114,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\AdmActions.txt" />
     <Content Include="data\InstList.txt" />
     <Content Include="data\reports.txt" />
     <Content Include="data\userData.txt" />

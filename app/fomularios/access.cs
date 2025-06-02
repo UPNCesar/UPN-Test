@@ -179,68 +179,21 @@ namespace app
 
 
 
-            
-            if (resultadoError != "")
+
+            if (resultadoError == "usuario")
             {
 
-                aplicacionadmin appad = new aplicacionadmin(app_name, app_version, resultadoError);
+                this.Hide();
+                menu_principal _menu = new menu_principal(app_name, app_version, 1, user_n.Text, "");
+                _menu.ShowDialog();
 
-
-                switch (resultadoError)
-                {
-                    
-                    case "Cesar":
-
-                        this.Hide();
-
-      
-                        appad.ShowDialog();
-                        
-                        this.Close();
-          
-                        break;
-                    case "Blanco":
-
-                        this.Hide();
-
-
-                        appad.ShowDialog();
-                        
-                        this.Close();
-
-                        break;
-                    case "Luis":
-
-                        this.Hide();
-
-                
-                        appad.ShowDialog();
-                        
-                        this.Close();
-
-                        break;
-
-                    case "usuario":
-
-                        this.Hide();
-                        menu_principal _menu = new menu_principal(app_name, app_version, 1, user_n.Text, "");
-                        _menu.ShowDialog();
-                        
-                        this.Close();
-
-                        break;
-
-                    default:
-
-                        MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                        break;
-                }
+                this.Close();
             }
-               
-           
+            else
+            {
+                MessageBox.Show(resultadoError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
         private void registrarse_Click(object sender, EventArgs e)
         {
             logicas logic = new logicas();

@@ -28,10 +28,6 @@ string inst_name = guarda el nombre de la institución creada y se pasa como par
 		 - access.cs = form reutilizado para: registro de usuarios , acceso de usuarios, creacion  de instituciones, acceso a instituciones,
 		|			  acceso como invitado. en resumen un form usado para solicitar datos al usuario para acceder o crear una cuenta en general.
 		|
-		 - aplicacionadmin.cs = formulario que explicaré luego
-		|
-		 - console.cs = Form que se reutilizará en caso de que requerimos una consola tipo petedoractyl para algun objetivo
-		|
 		 - Form1.cs = Formulario que se presenta al inicio de la aplicación y ofrecerá 3 opciones:  registro, login o acceso como invitado
 		|
 		 - menu principal.cs = Un formulario que se reutiliza al igual que access pero cn la finalidad de mostrar diferentes opciones dependiendo

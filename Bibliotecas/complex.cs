@@ -10,17 +10,7 @@ namespace Bs
     public class libraryOne
     {
 
-        public static string AdminResetdb(string user_name)
-        {
-            TextWriter AdmReset = new StreamWriter(@"C:\UPN-Test\app\data\AdmActions.txt");
-            // 
-
-            AdmReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores");
-
-            AdmReset.Close();
-
-            return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de acciones de administradores";
-        }
+        
 
 
         public static string UserResetdb(string user_name)
@@ -58,20 +48,6 @@ namespace Bs
 
             return $"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de reportes/reclamos";
         }
-
-
-
-        public static string ReportsToBugs(string user_name, string message)
-        {
-            TextWriter reportes = File.AppendText(@"C:\UPN-Test\app\data\AdmActions.txt");
-
-            reportes.WriteLine($"[Reporte de {user_name}:] {message}");
-
-            reportes.Close();
-
-            return $"Gracias por realizar un reporte. ¡Tus reportes nos ayudan a mejorar cada día!";
-        }
-
 
 
         public static string SearchUsername(string user_name)
@@ -192,38 +168,6 @@ namespace Bs
 
             return false;
         }
-
-
-
-
-        public static string WriteLogAdmin(string user_name, short nivel, string message)
-        {
-            TextWriter admwrite = File.AppendText(@"C:\UPN-Test\app\data\AdmActions.txt");
-            switch (nivel)
-            {
-                case 1:
-                    admwrite.WriteLine($"[INFO:] {user_name} {message}");
-
-                    admwrite.Close();
-
-                    return $"[INFO:] {user_name} {message}";
-
-                case 2:
-                    admwrite.WriteLine($"[WARN:] {user_name} {message}");
-
-                    admwrite.Close();
-
-                    return $"[WARN:] {user_name} {message}";
-                case 3:
-                    admwrite.WriteLine($"[ERROR:] {user_name} {message}");
-
-                    admwrite.Close();
-
-                    return $"[ERROR:] {user_name} {message}";
-            }
-            return $"[ERROR CRiTICO:] {user_name} No existe el tipo de alerta";
-        }
-
 
 
         public static bool VerifyWorldBlockList(string palabra)

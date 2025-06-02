@@ -1,3 +1,0 @@
-[ALERT:] (Acción irreversible) Cesar Reseteó la base de datos de registro de acciones de administradores
-[INFO:] Cesar Salió de su consola personal
-[INFO:] Cesar Limpió su consola personal...
