@@ -136,6 +136,7 @@
     <Content Include="data\InstList.txt" />
     <Content Include="data\reports.txt" />
     <Content Include="data\userData.txt" />
+    <Content Include="fomularios\instrtucciones_generales.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

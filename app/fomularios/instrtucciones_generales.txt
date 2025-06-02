@@ -1,0 +1,91 @@
+﻿## Datos de variables importantes ----------------------
+
+string app_name, string app_version = variables de tipo string que pasan entre formularios mediante funciones con parámetros para
+										usarlo luego en el nombre del form.
+
+string user_name = creada después del registro y usada como identificador de usuario para permitir usar el resto de opciones de la
+					aplicacion. se pasa de form en form como parámetro despues del form menu_principal.cs/acces.cs
+
+string inst_name = guarda el nombre de la institución creada y se pasa como parámetros entre funciones para permitir el sistema de roles
+
+
+## Estructura de archivos:
+
+/app/
+	data/
+
+		|
+		 - AdmActions.txt = lista de acciones admin que se escriben dentro de la aplicación. 
+		|
+		 - InstList.txt = lista de instituciones que se registran dentro de la aplicación
+		|
+		 - reports.txt = reportes que obtiene la aplicación luego que un usuario deja su reporte en el boton reportes de menu_principal.cs
+		|
+		 - userData.txt = lista de usuarios que  se registran para el manejo del login y register.
+		|
+	formularios/
+		|
+		 - access.cs = form reutilizado para: registro de usuarios , acceso de usuarios, creacion  de instituciones, acceso a instituciones,
+		|			  acceso como invitado. en resumen un form usado para solicitar datos al usuario para acceder o crear una cuenta en general.
+		|
+		 - aplicacionadmin.cs = formulario que explicaré luego
+		|
+		 - console.cs = Form que se reutilizará en caso de que requerimos una consola tipo petedoractyl para algun objetivo
+		|
+		 - Form1.cs = Formulario que se presenta al inicio de la aplicación y ofrecerá 3 opciones:  registro, login o acceso como invitado
+		|
+		 - menu principal.cs = Un formulario que se reutiliza al igual que access pero cn la finalidad de mostrar diferentes opciones dependiendo
+		|					el tipo de acceso que tuv con acticipacion por ejemplo: acceso como invitado, accedio a su cuenta ó
+		|					accedió a una institución.
+		|					
+		|
+	logic/
+		|
+		 - logicas.cs = un archivo de consola que se utiliza para procesar y retornar valor "return" al ser llamado mediante la instancia
+						de una de sus funciones. ¡Solo este archivo puede procesar información compleja porque: Si necesitas usar la 
+						misma lógica en varios formularios, puedes reutilizar las funciones o tambien llamadas métodos de la clase Logicas 
+						sin duplicar código y dar mejor mantenimiento al código
+		
+/Bs/
+	|
+	 - complex = Es un archivo de consola que tiene funciones de encabezado propias (Bibliotecas tambien llamadas librerias) que puede ser utilizada en el código
+	
+
+
+## Misceláneos
+
+- InitializeComponent(); = Método automáticamente generado en aplicaciones Windows Forms para crear y configurae todos los controles (botones, 
+							cuadros de texto,etc) del formulario antes de que se muestre
+
+
+- this = Sirve para referirse al formulario actual por ejemplo ' this.text = var "hola" ' que quiere decir "el formulario actual cambiar de texto 
+			a "hola" (osea el nombre que se muestra al cargar form en la parte superior).
+
+			Este this tambien se usa al definir variables como instancia, por ejemplo: (abajo un pedazo de code)
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+namespace app.fomularios
+{
+    public partial class menu_principal : Form
+    {
+        private string app_nam; <- Variable como instancia (puede ser llamado de cualquier lugar solo dentro de la clase, no puede se llamado fuera de clase)
+        private string app_versio;
+        private string user_nam;
+        private string inst_nam;
+
+        public menu_principal(string app_name, string app_version, short opciones, string user_name, string inst_name)
+        {
+            InitializeComponent();
+
+            this.app_nam = app_name; <- se le asigna un valor a la variable como instancia, no necesariamente otra variable puede ser "this.app_nam = "Hola";" porque es string
+            this.app_versio = app_version;
+            this.user_nam = user_name;
+            this.inst_nam = inst_name;
+
+            switch (opciones)...
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+- .Text = su funcion es establecer a cualquier cosa un contenido string o obtener un valor ingresado de tipo string como es en el caso de los texbox (cuadros de texto)
+- 
