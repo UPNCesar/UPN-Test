@@ -40,7 +40,7 @@ namespace Bs
 
         public static string ReportesResetdb(string user_name)
         {
-            TextWriter reporReset = new StreamWriter(@"D:\UPN-Test\app\data\InstList.txt");
+            TextWriter reporReset = new StreamWriter(@"C:\UPN-Test\app\data\InstList.txt");
 
             reporReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de reportes/reclamos");
 
@@ -126,7 +126,7 @@ namespace Bs
 
         public static string SearchPassword(string password)
         {
-            string[] user_basedata = File.ReadAllLines(@"D:\UPN-Test\app\data\userData.txt");
+            string[] user_basedata = File.ReadAllLines(@"C:\UPN-Test\app\data\userData.txt");
             //D:\UPN-Test\app\data\userData.txt
 
             for (int i = 0; i < user_basedata.Length; i++)

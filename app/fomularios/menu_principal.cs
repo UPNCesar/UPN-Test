@@ -156,9 +156,75 @@ namespace app.fomularios
 
         private void Asistencias_generales_Click(object sender, EventArgs e)
         {
-            //asisteas cualquier_variable = new asisteas(app_nam, app_versio, 11);
 
-            //cualquier_variable.ShowDialog();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void asistencia_mi_hijo_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void Asistencia_alum_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
