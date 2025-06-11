@@ -15,6 +15,7 @@ namespace Bs
 
         public static string UserResetdb(string user_name)
         {
+        
             TextWriter UserReset = new StreamWriter(@"C:\UPN-Test\app\data\userData.txt");
 
             UserReset.WriteLine($"[ALERT:] (Acción irreversible) {user_name} Reseteó la base de datos de registro de usuarios");
