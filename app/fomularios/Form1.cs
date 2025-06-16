@@ -21,18 +21,12 @@ namespace app
         //defininicion de var como instancia
 
         public Form1(string app_name, string app_version)
-        {
-            
+        {      
             InitializeComponent();  
-
             this.Text = $"{app_name} {app_version}";
-
             this.app_nam = app_name ;
             this.app_versio = app_version ;
-
         }
-
-
         private void login_Click(object sender, EventArgs e)
         {
             access acceso = new access(0, app_nam, app_versio, "form");
@@ -40,24 +34,11 @@ namespace app
             acceso.ShowDialog();
             this.Close();
         }
-
         private void register_Click(object sender, EventArgs e)
         {
             access acceso = new access(1, app_nam, app_versio, "form");
             this.Hide();
             acceso.ShowDialog();
-            this.Close();
-        }
-
-        
-
-        private void invitado_Click(object sender, EventArgs e)
-        {
-            access acceso = new access(2, app_nam,app_versio, "");
-
-            
-            this.Hide();
-            acceso.ShowDialog(); 
             this.Close();
         }
     }

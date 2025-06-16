@@ -34,33 +34,27 @@ namespace app.fomularios
                 case 1:
 
                     //-------------------------------------------------------------------------------------
-                    //-------------------------ACCEDIO A SU CUENTA USUARIO -----------
+                    //-------------------------ACCEDIO A SU CUENTA USUARIO --------------------------------
                     //-------------------------------------------------------------------------------------
                     //-------------------------------------------------------------------------------------
 
                     hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
+                    this.Text = $"{app_name} {app_version}";
                     register2.Visible = false;
                     login2.Visible = false;
-
-                    TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
-                    this.Text = $"{app_name} {app_version}";
-                    register2.Visible=false;
-                    login2.Visible=false;
-
-                    break;
-                case 2:
-
-                    //-------------------------------------------------------------------------------------
-                    //----------------------------------------- MODO INVITADO --------------------------------------------
-                    //-------------------------------------------------------------------------------------
-
-                    hello.Text = $"Hola {user_nam} Debes iniciar sesión para desbloquear más funciones";
-                    crear_inst.Visible = false;
-                    unirse_inst.Visible = false;
-                    this.Text = $"{app_name} {app_version}";
-      
-                    
-                    TXTann.Text = $"{user_nam} inicia sesion para desbloquear más opciones";
+                    crear_inst.Visible = true;
+                    unirse_inst.Visible = true;
+                    asistencia_mi_hijo.Enabled = false;
+                    Asistencia_alum.Enabled = false;
+                    Asistencias_generales.Enabled = false;
+                    Btncrearreuniones.Enabled = false;
+                    BtnRealizarSolicitud.Enabled = false;
+                    BtnRegAlumandpadres.Enabled = false;
+                    Btnverreunion.Enabled = false;
+                    BtnVerSolicitudes.Enabled = false;
+                    BtnLeaveinst.Visible = false;
+                    Gbxpadres.Visible = true;
+                    GbxProfesores.Visible = true;
                     break;
                 case 3:
                     //-------------------------------------------------------------------------------------
@@ -74,7 +68,17 @@ namespace app.fomularios
                     unirse_inst.Visible = false;
                     register2.Visible = false;
                     login2.Visible = false;
-
+                    asistencia_mi_hijo.Visible = false;
+                    Asistencia_alum.Visible = false;
+                    Asistencias_generales.Visible = true; 
+                    Btncrearreuniones.Visible = true;
+                    BtnRealizarSolicitud.Visible = false;
+                    BtnRegAlumandpadres.Visible = true;
+                    Btnverreunion.Visible = true;
+                    BtnVerSolicitudes.Visible = true;
+                    BtnLeaveinst.Visible = true;
+                    Gbxpadres.Visible = false;
+                    GbxProfesores.Visible = false;
                     break;
             }
         }
@@ -102,11 +106,6 @@ namespace app.fomularios
             this.Close();
         }
 
-        private void ver_reunion_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void crear_inst_Click(object sender, EventArgs e)
         {
             access accesint = new access(3, app_nam, app_versio, user_nam);
@@ -118,12 +117,6 @@ namespace app.fomularios
 
         }
 
-        public void cerrarForm() 
-        {
-            this.Close();
-            
-        }
-
         private void unirse_inst_Click(object sender, EventArgs e)
         {
             access accesint = new access(4, app_nam, app_versio, user_nam);
@@ -132,28 +125,6 @@ namespace app.fomularios
 
             this.Close();
         }
-
-        private void Leave_inst_Click(object sender, EventArgs e)
-        {
-            hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
-            register2.Visible = false;
-            login2.Visible = false;
-
-            TXTann.Text = $"{user_nam} Adquiere nuestro plan plus para obetenr beneficios";
-            this.Text = $"{app_nam} {app_versio}";
-            register2.Visible = false;
-            login2.Visible = false;
-
-            crear_inst.Visible = true;
-            unirse_inst.Visible = true;
-            Leave_inst.Visible = false;
-        }
-
-        private void Olvido_code_inst_Click(object sender, EventArgs e)
-        {
-            //Proceso para recuperar código institucional.
-        }
-
         private void Asistencias_generales_Click(object sender, EventArgs e)
         {
 
@@ -225,6 +196,28 @@ namespace app.fomularios
 
 
 
+        }
+
+        private void BtnLeaveinst_Click_1(object sender, EventArgs e)
+        {
+            hello.Text = $"Hola {user_nam} Debes estar en una institución para desbloquear mas funciones";
+            this.Text = $"{app_nam} {app_versio}";
+            asistencia_mi_hijo.Visible = true;
+            Asistencia_alum.Visible = true;
+            register2.Visible = false;
+            login2.Visible = false;
+            crear_inst.Visible = true;
+            unirse_inst.Visible = true;
+            asistencia_mi_hijo.Enabled = false;
+            Asistencia_alum.Enabled = false;
+            Asistencias_generales.Enabled = false;
+            Btncrearreuniones.Enabled = false;
+            BtnRealizarSolicitud.Enabled = false;
+            BtnRegAlumandpadres.Enabled = false;
+            Btnverreunion.Enabled = false;
+            BtnVerSolicitudes.Enabled = false;
+            Gbxpadres.Visible = true;
+            GbxProfesores.Visible = true;
         }
     }
 }

@@ -32,19 +32,23 @@
             this.unirse_inst = new System.Windows.Forms.Button();
             this.register2 = new System.Windows.Forms.Button();
             this.login2 = new System.Windows.Forms.Button();
-            this.TXTann = new System.Windows.Forms.Label();
             this.hello = new System.Windows.Forms.Label();
             this.CloseAll = new System.Windows.Forms.Button();
-            this.Reg_Alumnos = new System.Windows.Forms.Button();
+            this.BtnRegAlumandpadres = new System.Windows.Forms.Button();
             this.Asistencia_alum = new System.Windows.Forms.Button();
-            this.ver_reunion = new System.Windows.Forms.Button();
-            this.View_Solicitud = new System.Windows.Forms.Button();
-            this.crear_reuniones = new System.Windows.Forms.Button();
+            this.Btnverreunion = new System.Windows.Forms.Button();
+            this.BtnVerSolicitudes = new System.Windows.Forms.Button();
+            this.Btncrearreuniones = new System.Windows.Forms.Button();
             this.Asistencias_generales = new System.Windows.Forms.Button();
-            this.Realizar_solicitud = new System.Windows.Forms.Button();
+            this.BtnRealizarSolicitud = new System.Windows.Forms.Button();
             this.asistencia_mi_hijo = new System.Windows.Forms.Button();
-            this.Leave_inst = new System.Windows.Forms.Button();
-            this.Olvido_code_inst = new System.Windows.Forms.Button();
+            this.BtnLeaveinst = new System.Windows.Forms.Button();
+            this.Gbxpadres = new System.Windows.Forms.GroupBox();
+            this.GbxAdmin = new System.Windows.Forms.GroupBox();
+            this.GbxProfesores = new System.Windows.Forms.GroupBox();
+            this.Gbxpadres.SuspendLayout();
+            this.GbxAdmin.SuspendLayout();
+            this.GbxProfesores.SuspendLayout();
             this.SuspendLayout();
             // 
             // crear_inst
@@ -69,7 +73,7 @@
             // 
             // register2
             // 
-            this.register2.Location = new System.Drawing.Point(499, 53);
+            this.register2.Location = new System.Drawing.Point(499, 37);
             this.register2.Name = "register2";
             this.register2.Size = new System.Drawing.Size(142, 23);
             this.register2.TabIndex = 25;
@@ -79,7 +83,7 @@
             // 
             // login2
             // 
-            this.login2.Location = new System.Drawing.Point(656, 53);
+            this.login2.Location = new System.Drawing.Point(656, 37);
             this.login2.Name = "login2";
             this.login2.Size = new System.Drawing.Size(142, 23);
             this.login2.TabIndex = 26;
@@ -87,23 +91,14 @@
             this.login2.UseVisualStyleBackColor = true;
             this.login2.Click += new System.EventHandler(this.login2_Click);
             // 
-            // TXTann
-            // 
-            this.TXTann.AutoSize = true;
-            this.TXTann.Location = new System.Drawing.Point(12, 506);
-            this.TXTann.Name = "TXTann";
-            this.TXTann.Size = new System.Drawing.Size(251, 13);
-            this.TXTann.TabIndex = 27;
-            this.TXTann.Text = "Desbloquea más funciones accediendo a tu cuenta";
-            // 
             // hello
             // 
             this.hello.AutoSize = true;
-            this.hello.Location = new System.Drawing.Point(28, 29);
+            this.hello.Location = new System.Drawing.Point(21, 24);
             this.hello.Name = "hello";
-            this.hello.Size = new System.Drawing.Size(75, 13);
+            this.hello.Size = new System.Drawing.Size(100, 13);
             this.hello.TabIndex = 29;
-            this.hello.Text = "texto welcome";
+            this.hello.Text = "texto de bienvenida";
             // 
             // CloseAll
             // 
@@ -116,19 +111,19 @@
             this.CloseAll.UseVisualStyleBackColor = false;
             this.CloseAll.Click += new System.EventHandler(this.CloseAll_Click);
             // 
-            // Reg_Alumnos
+            // BtnRegAlumandpadres
             // 
-            this.Reg_Alumnos.Location = new System.Drawing.Point(458, 294);
-            this.Reg_Alumnos.Name = "Reg_Alumnos";
-            this.Reg_Alumnos.Size = new System.Drawing.Size(151, 23);
-            this.Reg_Alumnos.TabIndex = 33;
-            this.Reg_Alumnos.Text = "Registro de alumnos/padres";
-            this.Reg_Alumnos.UseVisualStyleBackColor = true;
+            this.BtnRegAlumandpadres.Location = new System.Drawing.Point(234, 78);
+            this.BtnRegAlumandpadres.Name = "BtnRegAlumandpadres";
+            this.BtnRegAlumandpadres.Size = new System.Drawing.Size(166, 23);
+            this.BtnRegAlumandpadres.TabIndex = 33;
+            this.BtnRegAlumandpadres.Text = "Registro de alumnos/padres";
+            this.BtnRegAlumandpadres.UseVisualStyleBackColor = true;
             // 
             // Asistencia_alum
             // 
             this.Asistencia_alum.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Asistencia_alum.Location = new System.Drawing.Point(244, 252);
+            this.Asistencia_alum.Location = new System.Drawing.Point(16, 38);
             this.Asistencia_alum.Name = "Asistencia_alum";
             this.Asistencia_alum.Size = new System.Drawing.Size(166, 23);
             this.Asistencia_alum.TabIndex = 35;
@@ -136,58 +131,57 @@
             this.Asistencia_alum.UseVisualStyleBackColor = false;
             this.Asistencia_alum.Click += new System.EventHandler(this.Asistencia_alum_Click);
             // 
-            // ver_reunion
+            // Btnverreunion
             // 
-            this.ver_reunion.Location = new System.Drawing.Point(31, 167);
-            this.ver_reunion.Name = "ver_reunion";
-            this.ver_reunion.Size = new System.Drawing.Size(569, 23);
-            this.ver_reunion.TabIndex = 36;
-            this.ver_reunion.Text = "Reuniones pendientes";
-            this.ver_reunion.UseVisualStyleBackColor = true;
-            this.ver_reunion.Click += new System.EventHandler(this.ver_reunion_Click);
+            this.Btnverreunion.Location = new System.Drawing.Point(27, 78);
+            this.Btnverreunion.Name = "Btnverreunion";
+            this.Btnverreunion.Size = new System.Drawing.Size(167, 23);
+            this.Btnverreunion.TabIndex = 36;
+            this.Btnverreunion.Text = "Reuniones pendientes";
+            this.Btnverreunion.UseVisualStyleBackColor = true;
             // 
-            // View_Solicitud
+            // BtnVerSolicitudes
             // 
-            this.View_Solicitud.Location = new System.Drawing.Point(458, 323);
-            this.View_Solicitud.Name = "View_Solicitud";
-            this.View_Solicitud.Size = new System.Drawing.Size(151, 23);
-            this.View_Solicitud.TabIndex = 38;
-            this.View_Solicitud.Text = "Ver Solicitudes";
-            this.View_Solicitud.UseVisualStyleBackColor = true;
+            this.BtnVerSolicitudes.Location = new System.Drawing.Point(234, 39);
+            this.BtnVerSolicitudes.Name = "BtnVerSolicitudes";
+            this.BtnVerSolicitudes.Size = new System.Drawing.Size(167, 23);
+            this.BtnVerSolicitudes.TabIndex = 38;
+            this.BtnVerSolicitudes.Text = "Ver Solicitudes";
+            this.BtnVerSolicitudes.UseVisualStyleBackColor = true;
             // 
-            // crear_reuniones
+            // Btncrearreuniones
             // 
-            this.crear_reuniones.Location = new System.Drawing.Point(259, 367);
-            this.crear_reuniones.Name = "crear_reuniones";
-            this.crear_reuniones.Size = new System.Drawing.Size(350, 23);
-            this.crear_reuniones.TabIndex = 41;
-            this.crear_reuniones.Text = "nueva reunion";
-            this.crear_reuniones.UseVisualStyleBackColor = true;
+            this.Btncrearreuniones.Location = new System.Drawing.Point(27, 39);
+            this.Btncrearreuniones.Name = "Btncrearreuniones";
+            this.Btncrearreuniones.Size = new System.Drawing.Size(167, 23);
+            this.Btncrearreuniones.TabIndex = 41;
+            this.Btncrearreuniones.Text = "nueva reunion";
+            this.Btncrearreuniones.UseVisualStyleBackColor = true;
             // 
             // Asistencias_generales
             // 
             this.Asistencias_generales.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Asistencias_generales.Location = new System.Drawing.Point(458, 252);
+            this.Asistencias_generales.Location = new System.Drawing.Point(234, 120);
             this.Asistencias_generales.Name = "Asistencias_generales";
-            this.Asistencias_generales.Size = new System.Drawing.Size(142, 23);
+            this.Asistencias_generales.Size = new System.Drawing.Size(167, 23);
             this.Asistencias_generales.TabIndex = 40;
             this.Asistencias_generales.Text = "Asistencias colegio";
             this.Asistencias_generales.UseVisualStyleBackColor = false;
             this.Asistencias_generales.Click += new System.EventHandler(this.Asistencias_generales_Click);
             // 
-            // Realizar_solicitud
+            // BtnRealizarSolicitud
             // 
-            this.Realizar_solicitud.Location = new System.Drawing.Point(31, 212);
-            this.Realizar_solicitud.Name = "Realizar_solicitud";
-            this.Realizar_solicitud.Size = new System.Drawing.Size(370, 23);
-            this.Realizar_solicitud.TabIndex = 39;
-            this.Realizar_solicitud.Text = "Realizar solicitud";
-            this.Realizar_solicitud.UseVisualStyleBackColor = true;
+            this.BtnRealizarSolicitud.Location = new System.Drawing.Point(27, 120);
+            this.BtnRealizarSolicitud.Name = "BtnRealizarSolicitud";
+            this.BtnRealizarSolicitud.Size = new System.Drawing.Size(167, 23);
+            this.BtnRealizarSolicitud.TabIndex = 39;
+            this.BtnRealizarSolicitud.Text = "Realizar solicitud";
+            this.BtnRealizarSolicitud.UseVisualStyleBackColor = true;
             // 
             // asistencia_mi_hijo
             // 
             this.asistencia_mi_hijo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.asistencia_mi_hijo.Location = new System.Drawing.Point(31, 251);
+            this.asistencia_mi_hijo.Location = new System.Drawing.Point(25, 36);
             this.asistencia_mi_hijo.Name = "asistencia_mi_hijo";
             this.asistencia_mi_hijo.Size = new System.Drawing.Size(167, 23);
             this.asistencia_mi_hijo.TabIndex = 43;
@@ -195,51 +189,72 @@
             this.asistencia_mi_hijo.UseVisualStyleBackColor = false;
             this.asistencia_mi_hijo.Click += new System.EventHandler(this.asistencia_mi_hijo_Click);
             // 
-            // Leave_inst
+            // BtnLeaveinst
             // 
-            this.Leave_inst.BackColor = System.Drawing.Color.IndianRed;
-            this.Leave_inst.Location = new System.Drawing.Point(544, 496);
-            this.Leave_inst.Name = "Leave_inst";
-            this.Leave_inst.Size = new System.Drawing.Size(142, 23);
-            this.Leave_inst.TabIndex = 46;
-            this.Leave_inst.Text = "Salir de la I.E.";
-            this.Leave_inst.UseVisualStyleBackColor = false;
-            this.Leave_inst.Click += new System.EventHandler(this.Leave_inst_Click);
+            this.BtnLeaveinst.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnLeaveinst.Location = new System.Drawing.Point(541, 496);
+            this.BtnLeaveinst.Name = "BtnLeaveinst";
+            this.BtnLeaveinst.Size = new System.Drawing.Size(142, 23);
+            this.BtnLeaveinst.TabIndex = 46;
+            this.BtnLeaveinst.Text = "Salir de la I.E.";
+            this.BtnLeaveinst.UseVisualStyleBackColor = false;
+            this.BtnLeaveinst.Click += new System.EventHandler(this.BtnLeaveinst_Click_1);
             // 
-            // Olvido_code_inst
+            // Gbxpadres
             // 
-            this.Olvido_code_inst.Location = new System.Drawing.Point(425, 496);
-            this.Olvido_code_inst.Name = "Olvido_code_inst";
-            this.Olvido_code_inst.Size = new System.Drawing.Size(261, 23);
-            this.Olvido_code_inst.TabIndex = 47;
-            this.Olvido_code_inst.Text = "¿Olvidaste tu código de acceso institucional?";
-            this.Olvido_code_inst.UseVisualStyleBackColor = true;
-            this.Olvido_code_inst.Click += new System.EventHandler(this.Olvido_code_inst_Click);
+            this.Gbxpadres.Controls.Add(this.asistencia_mi_hijo);
+            this.Gbxpadres.Location = new System.Drawing.Point(42, 149);
+            this.Gbxpadres.Name = "Gbxpadres";
+            this.Gbxpadres.Size = new System.Drawing.Size(203, 79);
+            this.Gbxpadres.TabIndex = 48;
+            this.Gbxpadres.TabStop = false;
+            this.Gbxpadres.Text = "Padres";
+            // 
+            // GbxAdmin
+            // 
+            this.GbxAdmin.Controls.Add(this.BtnRealizarSolicitud);
+            this.GbxAdmin.Controls.Add(this.Btncrearreuniones);
+            this.GbxAdmin.Controls.Add(this.Btnverreunion);
+            this.GbxAdmin.Controls.Add(this.BtnRegAlumandpadres);
+            this.GbxAdmin.Controls.Add(this.BtnVerSolicitudes);
+            this.GbxAdmin.Controls.Add(this.Asistencias_generales);
+            this.GbxAdmin.Location = new System.Drawing.Point(42, 246);
+            this.GbxAdmin.Name = "GbxAdmin";
+            this.GbxAdmin.Size = new System.Drawing.Size(427, 191);
+            this.GbxAdmin.TabIndex = 49;
+            this.GbxAdmin.TabStop = false;
+            this.GbxAdmin.Text = "Sector Administrativo";
+            // 
+            // GbxProfesores
+            // 
+            this.GbxProfesores.Controls.Add(this.Asistencia_alum);
+            this.GbxProfesores.Location = new System.Drawing.Point(264, 149);
+            this.GbxProfesores.Name = "GbxProfesores";
+            this.GbxProfesores.Size = new System.Drawing.Size(205, 79);
+            this.GbxProfesores.TabIndex = 50;
+            this.GbxProfesores.TabStop = false;
+            this.GbxProfesores.Text = "Profesores";
             // 
             // menu_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 531);
-            this.Controls.Add(this.Olvido_code_inst);
-            this.Controls.Add(this.Leave_inst);
-            this.Controls.Add(this.asistencia_mi_hijo);
-            this.Controls.Add(this.crear_reuniones);
-            this.Controls.Add(this.Asistencias_generales);
-            this.Controls.Add(this.Realizar_solicitud);
-            this.Controls.Add(this.View_Solicitud);
-            this.Controls.Add(this.ver_reunion);
-            this.Controls.Add(this.Asistencia_alum);
-            this.Controls.Add(this.Reg_Alumnos);
+            this.Controls.Add(this.GbxProfesores);
+            this.Controls.Add(this.GbxAdmin);
+            this.Controls.Add(this.Gbxpadres);
+            this.Controls.Add(this.BtnLeaveinst);
             this.Controls.Add(this.CloseAll);
             this.Controls.Add(this.hello);
-            this.Controls.Add(this.TXTann);
             this.Controls.Add(this.login2);
             this.Controls.Add(this.register2);
             this.Controls.Add(this.unirse_inst);
             this.Controls.Add(this.crear_inst);
             this.Name = "menu_principal";
             this.Text = "menu";
+            this.Gbxpadres.ResumeLayout(false);
+            this.GbxAdmin.ResumeLayout(false);
+            this.GbxProfesores.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,18 +266,19 @@
         private System.Windows.Forms.Button unirse_inst;
         private System.Windows.Forms.Button register2;
         private System.Windows.Forms.Button login2;
-        private System.Windows.Forms.Label TXTann;
         private System.Windows.Forms.Label hello;
         private System.Windows.Forms.Button CloseAll;
-        private System.Windows.Forms.Button Reg_Alumnos;
+        private System.Windows.Forms.Button BtnRegAlumandpadres;
         private System.Windows.Forms.Button Asistencia_alum;
-        private System.Windows.Forms.Button ver_reunion;
-        private System.Windows.Forms.Button View_Solicitud;
-        private System.Windows.Forms.Button crear_reuniones;
+        private System.Windows.Forms.Button Btnverreunion;
+        private System.Windows.Forms.Button BtnVerSolicitudes;
+        private System.Windows.Forms.Button Btncrearreuniones;
         private System.Windows.Forms.Button Asistencias_generales;
-        private System.Windows.Forms.Button Realizar_solicitud;
+        private System.Windows.Forms.Button BtnRealizarSolicitud;
         private System.Windows.Forms.Button asistencia_mi_hijo;
-        private System.Windows.Forms.Button Leave_inst;
-        private System.Windows.Forms.Button Olvido_code_inst;
+        private System.Windows.Forms.Button BtnLeaveinst;
+        private System.Windows.Forms.GroupBox Gbxpadres;
+        private System.Windows.Forms.GroupBox GbxAdmin;
+        private System.Windows.Forms.GroupBox GbxProfesores;
     }
 }
