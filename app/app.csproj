@@ -58,6 +58,12 @@
     <Compile Include="fomularios\asisteas.Designer.cs">
       <DependentUpon>asisteas.cs</DependentUpon>
     </Compile>
+    <Compile Include="fomularios\Asistencias Colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\Asistencias Colegio.Designer.cs">
+      <DependentUpon>Asistencias Colegio.cs</DependentUpon>
+    </Compile>
     <Compile Include="fomularios\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,18 @@
     </Compile>
     <Compile Include="fomularios\menu_principal.Designer.cs">
       <DependentUpon>menu_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fomularios\NuevaReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\NuevaReunion.Designer.cs">
+      <DependentUpon>NuevaReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fomularios\ReunionesPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fomularios\ReunionesPendientes.Designer.cs">
+      <DependentUpon>ReunionesPendientes.cs</DependentUpon>
     </Compile>
     <Compile Include="logic\logicas.cs" />
     <Compile Include="Program.cs" />
@@ -84,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fomularios\menu_principal.resx">
       <DependentUpon>menu_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fomularios\NuevaReunion.resx">
+      <DependentUpon>NuevaReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fomularios\ReunionesPendientes.resx">
+      <DependentUpon>ReunionesPendientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
